@@ -116,6 +116,11 @@ html{
     list-style-type: none;
 }
 
+.list-images {
+    width: 5rem;
+    height: 7rem;
+}
+
 footer {
     background-color: #334766;
     height: 2.5rem;
