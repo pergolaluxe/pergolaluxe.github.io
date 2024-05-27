@@ -3,9 +3,6 @@ html{
    /* height: 100%;*/
 }
 
-
-
-
 #main-logo {
     font-family: "Bodoni Moda", serif;
     font-weight: bold;
@@ -22,7 +19,6 @@ html{
         font-size: 2rem;
     }
 }
-
 
 .main-header {
     display: flex;
@@ -85,7 +81,6 @@ html{
     color: #27374D;
 }
 
-
 .main-title {
     color: #DDE6ED;
     text-align: center;
@@ -99,7 +94,6 @@ html{
     color:#9DB2BF
     font-family: 'raleway';
     font-size: 2rem; 
-    margin-bottom: 40rem;
 }
 
 .subtitle {
@@ -117,6 +111,7 @@ html{
     color:#9DB2BF;
     font-size: 2rem;
     font-family: 'raleway';
+    list-style-type: none;
 }
 
 
