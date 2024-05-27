@@ -110,13 +110,11 @@ html{
 }
 
 .list-item {
-    color:#9DB2BF;
+    color: #DDE6ED;
     font-size: 2rem;
     font-family: 'raleway';
     list-style-type: none;
 }
-
-
 
 footer {
     background-color: #334766;
