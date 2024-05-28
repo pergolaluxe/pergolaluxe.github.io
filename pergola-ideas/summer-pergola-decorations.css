@@ -119,7 +119,8 @@ html{
 .grid-wrapper {
     display: grid;
     grid-template-columns: 80%;
-    grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 5rem 
+    5rem 5rem 5rem 5rem;
 } 
 
 .grid-box-1 {
