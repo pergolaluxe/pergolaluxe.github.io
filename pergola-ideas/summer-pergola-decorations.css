@@ -114,13 +114,14 @@ html{
     font-size: 1.5rem;
     font-family: 'raleway';
     list-style-type: none;
+    margin-bottom: 1rem;
 }
 
 .grid-wrapper {
     display: grid;
     grid-template-columns: 80%;
-    grid-template-rows: 10rem 5rem 10rem 5rem 10rem 5rem 10rem 5rem 10rem 5rem 10rem 5rem 10rem 5rem 
-    10rem 5rem 10rem 5rem;
+    grid-template-rows: 10rem 10rem 5rem 10rem 40rem 5rem 10rem 10rem 10rem 10rem 10rem 10rem 10rem 10rem 
+    10rem 10rem 10rem 10rem;
 } 
 
 .grid-box-1 {
