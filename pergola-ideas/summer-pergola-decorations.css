@@ -158,6 +158,18 @@ html{
     grid-row-end: 6;
 }
 
+.image-container {
+    width: 24rem;
+    display: flex;
+    vertical-align: middle;
+}
+
+.list-image {
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+  }
+
 .grid-box-6 {
     grid-column-start: 1;
     grid-column-end: 2;
