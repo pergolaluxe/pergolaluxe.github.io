@@ -89,7 +89,7 @@ html{
     padding: 0;
     font-family: 'raleway';
     font-size: 3rem;
-}
+} 
 
 .basic-paragraph {
     color:#DDE6ED;
@@ -116,9 +116,136 @@ html{
     list-style-type: none;
 }
 
-img {
-    width: 1000px;
-    height: 1200px;
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem 5rem;
+} 
+
+.grid-box-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+.grid-box-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-box-3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.grid-box-4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.grid-box-5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.grid-box-6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.grid-box-7 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.grid-box-8 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.grid-box-9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+
+.grid-box-10 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+
+.grid-box-11 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+
+.grid-box-12 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+
+.grid-box-13 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+
+.grid-box-14 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 14;
+    grid-row-end: 15;
+}
+
+.grid-box-15 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+
+.grid-box-16 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 16;
+    grid-row-end: 17;
+}
+
+.grid-box-17 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 17;
+    grid-row-end: 18;
+}
+
+.grid-box-18 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 18;
+    grid-row-end: 19;
 }
 
 footer {
