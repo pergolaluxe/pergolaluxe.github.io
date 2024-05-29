@@ -118,6 +118,20 @@ html{
     margin-bottom: 1rem;
 }
 
+a:hover {
+    color:#DDE6ED;
+}
+
+a:active {
+  color:#DDE6ED;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #9DB2BF; 
+  text-decoration: none;
+}
+
 .grid-wrapper {
     display: grid;
     grid-template-columns: 80%;
