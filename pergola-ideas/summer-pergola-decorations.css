@@ -281,8 +281,8 @@ a:visited {
     .grid-wrapper {
         display: grid;
         grid-template-columns: 80%;
-        grid-template-rows: 3rem 2.7rem 1rem 2.5rem 22rem 1rem 1.75rem 23rem 1rem 1.75rem 5rem 1rem 5rem 1rem 
-        4.5rem 1rem 5rem 5rem;
+        grid-template-rows: 24rem 22rem 8rem 20rem 180rem 8rem 14rem 188rem 8rem 14rem 40rem 8rem 40rem 8rem 
+        36rem 8rem 40rem 40rem;
     } 
 }
 
