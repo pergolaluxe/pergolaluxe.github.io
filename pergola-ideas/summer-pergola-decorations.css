@@ -135,8 +135,8 @@ a:visited {
 .grid-wrapper {
     display: grid;
     grid-template-columns: 80%;
-    grid-template-rows: 12rem 11rem 4rem 10rem 90rem 4rem 7rem 94rem 4rem 7rem 20rem 7rem 20rem 7rem 
-    20rem 7rem 20rem 20rem;
+    grid-template-rows: 12rem 11rem 4rem 10rem 90rem 4rem 7rem 94rem 4rem 7rem 20rem 4rem 20rem 4rem 
+    18rem 4rem 20rem 20rem;
 } 
 
 .grid-box-1 {
