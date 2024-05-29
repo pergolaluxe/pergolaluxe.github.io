@@ -284,6 +284,11 @@ a:visited {
         grid-template-rows: 21rem 22rem 8rem 16rem 101rem 3rem 9rem 109rem 6rem 8rem 31rem 6rem 27rem 4rem 
         25rem 4rem 30rem 40rem;
     } 
+
+    .main-header {
+        width: 39rem;
+    }
+    
     .main-title {
         width: 30rem;
     }
