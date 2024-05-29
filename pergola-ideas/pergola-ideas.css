@@ -119,13 +119,26 @@ p{
 
 
 p {
-    color:#9DB2BF
+    color:#9DB2BF;
     font-family: sans-serif;
     font-size: 2rem; 
     margin-bottom: 40rem;
 }
 
 
+a:hover {
+    color:#DDE6ED;
+}
+
+a:active {
+  color:#DDE6ED;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #9DB2BF; 
+  text-decoration: none;
+}
 
 
 

@@ -277,6 +277,15 @@ a:visited {
     grid-row-end: 19;
 }
 
+@media (max-width: 50rem) {
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: 3rem 2.7rem 1rem 2.5rem 22rem 1rem 1.75rem 23rem 1rem 1.75rem 5rem 1rem 5rem 1rem 
+        4.5rem 1rem 5rem 5rem;
+    } 
+}
+
 footer {
     background-color: #334766;
     height: 2.5rem;
