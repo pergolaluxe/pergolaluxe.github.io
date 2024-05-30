@@ -1,0 +1,195 @@
+html{
+    background-color: #27374D;
+   /* height: 100%;*/
+}
+
+#main-logo {
+    font-family: "Bodoni Moda", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0rem;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 40rem) {
+    #main-logo {
+        font-size: 2rem;
+    }
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #334766;
+}
+
+.main-header__brand {
+    font-family: "raleway", sans-serif;
+    color: #9DB2BF;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.main-header__brand img {
+    height: 8rem;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav__items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "raleway", sans-serif;
+    vertical-align: text-top;
+    display:flex;
+    align-items: center;
+}
+
+.main-nav__item {
+    margin: 0 .75rem;
+    font-size: 1rem;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #9DB2BF;
+}
+
+.main-nav__item a:hover {
+    color: white;
+}
+
+.main-nav__item a:active {
+    color: white;
+}
+
+.main-nav__item--cta {
+    background: white;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.main-nav__item--cta a:hover {
+    color: #27374D;
+}
+
+.main-title {
+    color: #DDE6ED;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 3rem;
+    padding: 0;
+    font-family: 'raleway';
+    font-size: 3rem;
+} 
+
+.basic-paragraph {
+    color:#DDE6ED;
+    font-family: 'raleway';
+    font-size: 1.5rem; 
+    margin: 3rem;
+}
+
+.subtitle {
+    color:#9DB2BF;
+    font-family: "raleway";
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.lists {
+    list-style-type: none;
+    margin: 3rem;
+}
+
+.list-item {
+    color: #DDE6ED;
+    font-size: 1.5rem;
+    font-family: 'raleway';
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+a:hover {
+    color:#DDE6ED;
+}
+
+a:active {
+  color:#DDE6ED;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #9DB2BF; 
+  text-decoration: none;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 
+}
+
+.grid-box-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-box-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-box-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.grid-box-4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.grid-box-5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.grid-box-6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.grid-box-7 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.grid-box-8 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
