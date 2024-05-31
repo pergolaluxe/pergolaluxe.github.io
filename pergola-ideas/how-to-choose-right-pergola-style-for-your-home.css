@@ -132,6 +132,18 @@ a:visited {
   text-decoration: none;
 }
 
+.image-container {
+    width: 24rem;
+    display: flex;
+    vertical-align: middle;
+}
+
+.list-image {
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+  }
+  
 .grid-wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
