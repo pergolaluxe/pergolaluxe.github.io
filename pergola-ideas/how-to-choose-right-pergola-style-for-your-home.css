@@ -147,7 +147,8 @@ a:visited {
 .grid-wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 
+    grid-template-rows: 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem
+    20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem;
 }
 
 .grid-box-1 {
