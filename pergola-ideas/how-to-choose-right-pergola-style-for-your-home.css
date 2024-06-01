@@ -151,56 +151,56 @@ a:visited {
     20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem;
 }
 
-.grid-box-1 {
+.grid-box-one {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
 }
 
-.grid-box-2 {
+.grid-box-two {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-.grid-box-3 {
+.grid-box-three {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.grid-box-4 {
+.grid-box-four {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
-.grid-box-5 {
+.grid-box-five {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
 }
 
-.grid-box-6 {
+.grid-box-six {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 }
 
-.grid-box-7 {
+.grid-box-seven {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 7;
 }
 
-.grid-box-8 {
+.grid-box-eight {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 7;
