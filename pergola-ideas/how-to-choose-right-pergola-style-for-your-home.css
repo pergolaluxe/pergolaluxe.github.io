@@ -88,26 +88,26 @@ html{
     margin: 3rem;
     padding: 0;
     font-family: 'raleway';
-    font-size: 3rem;
+    font-size: 3rem 3rem 0 3rem;
 } 
 
 .basic-paragraph {
     color:#DDE6ED;
     font-family: 'raleway';
     font-size: 1.5rem; 
-    margin: 3rem;
+    margin: 3rem 3rem 0 3rem;
 }
 
 .subtitle {
     color:#9DB2BF;
     font-family: "raleway";
     font-size: 2rem;
-    margin: 3rem;
+    margin: 3rem 3rem 0 3rem;
 }
 
 .lists {
     list-style-type: none;
-    margin: 3rem;
+    margin: 3rem 3rem 0 3rem;
     display: grid;
 }
 
@@ -117,6 +117,7 @@ html{
     font-family: 'raleway';
     list-style-type: none;
     margin-bottom: 1rem;
+    display: grid;
 }
 
 a:hover {
@@ -148,8 +149,7 @@ a:visited {
 .grid-wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 5rem 10rem 4rem 6rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem
-    20rem 20rem 20rem 20rem 20rem 20rem 20rem 20rem;
+    grid-template-rows: auto;
 }
 
 .grid-box-one {
