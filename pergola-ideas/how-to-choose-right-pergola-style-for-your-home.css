@@ -108,6 +108,7 @@ html{
 .lists {
     list-style-type: none;
     margin: 3rem;
+    display: grid;
 }
 
 .list-item {
