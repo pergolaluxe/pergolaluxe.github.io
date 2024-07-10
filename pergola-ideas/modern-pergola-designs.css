@@ -106,9 +106,12 @@ html{
 }
 
 .grid-wrapper {
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
 }
+
 
 .title { 
     grid-column-start: 2;
