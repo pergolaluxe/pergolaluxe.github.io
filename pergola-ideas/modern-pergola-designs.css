@@ -112,6 +112,10 @@ html{
         grid-template-rows: auto;
 }
 
+.title {
+    grid-row-start: 1;
+}
+
 .blog-main {
     grid-column-start: 2;
     grid-column-end: 4;
