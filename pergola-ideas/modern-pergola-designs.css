@@ -112,4 +112,8 @@ html{
         grid-template-rows: auto;
 }
 
-
+.blog-main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: auto;
+}
