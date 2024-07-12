@@ -117,8 +117,18 @@ html{
     grid-column-start: 1;
 }
 
-.blog-main {
+.blog-main-one {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: auto;
+}
+
+.subtitle-one {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: auto;
+    color:#9DB2BF;
+    font-family: "raleway";
+    font-size: 2rem;
+    margin: 3rem;
 }
