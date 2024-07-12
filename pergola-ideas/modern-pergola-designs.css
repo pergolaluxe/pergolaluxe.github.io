@@ -120,13 +120,13 @@ html{
 .blog-main-one {
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: auto;
+    grid-row-start: 2;
 }
 
 .subtitle-one {
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: auto;
+    grid-row-start: 3;
     color:#9DB2BF;
     font-family: "raleway";
     font-size: 2rem;
