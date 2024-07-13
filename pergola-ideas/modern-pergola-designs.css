@@ -169,3 +169,8 @@ footer {
     grid-row-start: 4;
     height: 2rem;
 }
+
+.bottom-box {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
