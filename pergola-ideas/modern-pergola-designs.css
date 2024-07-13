@@ -162,7 +162,7 @@ h3 {
     margin: .4rem;
 }
 
-.footer {
+footer {
     background-color: #334766;
     grid-column-start: 1;
     grid-column-end: 5;
