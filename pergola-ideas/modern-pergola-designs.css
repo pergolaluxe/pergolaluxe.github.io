@@ -154,3 +154,9 @@ h3 {
 .conclusion {
     margin-top: 2rem;
 }
+
+.side-menu {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+}
