@@ -1,0 +1,18 @@
+.grid-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.title {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.blog-main-one {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+}
