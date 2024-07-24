@@ -179,7 +179,7 @@ html{
 }
 
 .primary-checklist {
-    grid-column-start: 4;
+    grid-column-start: 3;
     grid-column-end: 6;
     grid-row-start: 3;
 }
