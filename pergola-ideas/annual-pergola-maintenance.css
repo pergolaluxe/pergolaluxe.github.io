@@ -188,3 +188,9 @@ html{
     font-size: 4rem;
     margin: 2rem;
 }
+
+.conclusion {
+    grid-column-start:2;
+    grid-column-end: 8;
+    grid-row-start: 4;
+}
