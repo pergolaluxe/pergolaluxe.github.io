@@ -186,11 +186,17 @@ html{
 
 .ordered-list-style h3 {
     font-size: 2rem;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2 rem;
 }
 
 .conclusion {
     grid-column-start:2;
     grid-column-end: 8;
     grid-row-start: 4;
+}
+
+h4 {
+    font-size: 1rem;
+
 }
