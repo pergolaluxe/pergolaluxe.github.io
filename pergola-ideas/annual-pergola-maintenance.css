@@ -135,28 +135,6 @@ html{
  .conclusion {
      margin-top: 2rem;
  }
- 
- .side-menu {
-     grid-column-start: 4;
-     grid-column-end: 5;
-     grid-row-start: 3;
-     margin: .4rem;
- }
- 
- footer {
-     background-color: #334766;
-     grid-column-start: 1;
-     grid-column-end: 5;
-     grid-row-start: 4;
-     height: 2rem;
- }
- 
- .bottom-box {
-     grid-column-start: 2;
-     grid-column-end: 4;
- }
-
-
 
 
 .grid-wrapper {
