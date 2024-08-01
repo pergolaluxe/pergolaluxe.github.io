@@ -201,3 +201,6 @@ h4 {
     font-size: 1rem;
 }
 
+li li {
+    list-style-type: none;
+}
