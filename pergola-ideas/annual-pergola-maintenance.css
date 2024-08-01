@@ -214,6 +214,7 @@ ul ul ul {
     list-style-type: square;
 }
 
-h4 ul li {
+image {
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
