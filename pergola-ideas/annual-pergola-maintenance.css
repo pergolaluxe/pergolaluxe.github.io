@@ -205,3 +205,7 @@ h4 {
 li li {
     list-style-type: none;
 }
+
+h4 ul li {
+    margin-bottom: 1rem;
+}
