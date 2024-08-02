@@ -218,8 +218,6 @@ image {
 
 footer {
     background-color: #334766;
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 7;
     height: 2rem;
+    width: 100%;
 }
