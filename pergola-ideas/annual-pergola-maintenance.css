@@ -204,23 +204,17 @@ image {
     margin-bottom: 1rem;
 }
 
-.grid-box-two {
-    height: 100vh;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-row-start:5;
-}
+
 
 .bottom-box {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 5;
 }
 
 .bottom-box-2 {
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 8;
     grid-row-start: 6;
 }
 
