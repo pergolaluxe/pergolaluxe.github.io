@@ -221,6 +221,7 @@ footer {
     height: 2.5rem;
     display:flex;
     align-items: center;
+    grid-row-start: 7;
 }
 
 footer a {
