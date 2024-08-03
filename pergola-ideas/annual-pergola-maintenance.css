@@ -14,12 +14,6 @@ html{
      box-sizing: border-box;
  }
  
- @media (max-width: 40rem) {
-     #main-logo {
-         font-size: 2rem;
-     }
- }
- 
  .main-header {
      display: flex;
      align-items: center;
