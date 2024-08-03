@@ -238,3 +238,46 @@ footer a {
     text-align: center;
     margin-top: 2rem;
 }
+
+@media (max-width: 50rem) {
+    .grid-wrapper {
+        height: 100%;
+        display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      justify-content: center;
+    }
+
+    
+    .title {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    
+    .blog-main-one {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        font-size: 1.2rem;
+    }
+    
+    .primary-checklist {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+    }
+    
+    .ordered-list-style h3 {
+        font-size: 1.9rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        list-style-type: none;
+    }
+
+    .conclusion {
+        grid-column-start:2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+    }
+}
