@@ -154,6 +154,7 @@ html{
     grid-column-start: 2;
     grid-column-end: 8;
     grid-row-start: 2;
+    font-size: 1.2rem;
 }
 
 .primary-checklist {
@@ -163,7 +164,7 @@ html{
 }
 
 .ordered-list-style h3 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     list-style-type: none;
@@ -176,7 +177,7 @@ html{
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
@@ -192,6 +193,7 @@ ul ul {
 ul ul ul {
     list-style-type: square;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 image {
@@ -208,13 +210,13 @@ image {
 
 .bottom-box {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 9;
     grid-row-start: 5;
 }
 
 .bottom-box-2 {
     grid-column-start: 5;
-    grid-column-end: 8;
+    grid-column-end: 9;
     grid-row-start: 6;
 }
 
