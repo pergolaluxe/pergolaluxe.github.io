@@ -201,18 +201,22 @@ image {
     margin-bottom: 1rem;
 }
 
-
+.call-to-action {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 5;
+}
 
 .bottom-box {
     grid-column-start: 2;
     grid-column-end: 9;
-    grid-row-start: 5;
+    grid-row-start: 6;
 }
 
 .bottom-box-2 {
     grid-column-start: 5;
     grid-column-end: 9;
-    grid-row-start: 6;
+    grid-row-start: 7;
 }
 
 footer {
