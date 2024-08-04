@@ -278,4 +278,12 @@ footer a {
         grid-row-start: 4;
         margin: 1rem;
     }
+
+    .bottom-box {
+        margin-left: -3rem;
+    }
+
+    .bottom-box-2 {
+        margin-left: -3rem;
+    }
 }
