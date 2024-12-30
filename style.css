@@ -1,5 +1,6 @@
 html{
-    background-color: #27374D;
+    background-color: whitesmoke;
+    /*background-color: #27374D;
    /* height: 100%;*/
 }
 
@@ -204,7 +205,21 @@ main {
 
 
 
+footer {
+    background-color: #334766;
+    height: 2.5rem;
+    display:flex;
+    align-items: center;
+}
 
+footer a {
+    color: #9DB2BF;
+    font-size: 1rem;
+    font-family: 'raleway';
+    margin-left: 5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
 
 
 
