@@ -121,3 +121,35 @@ body {
         text-align: center;
     }
 }
+
+
+/* Define fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation */
+.blog-post {
+    animation: fadeIn 1s ease-out;
+}
+
+.post-content h2, .post-content p, blockquote {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.post-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.share-icon:hover {
+    background-color: #004080;
+    transform: scale(1.1);
+}
