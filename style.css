@@ -536,6 +536,18 @@ footer a {
 }
 
 
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .grid-container {
     display: flex;
     justify-content: center;
@@ -544,41 +556,32 @@ footer a {
     width: 100%;
 }
 
-/* Bento Grid styles */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Spacing between grid items */
-    width: 80%; /* Width of the grid */
-    max-width: 800px; /* Maximum width for large screens */
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
 }
 
-/* Grid Items */
 .grid-item {
     background-color: #eee;
     border-radius: 8px;
-    overflow: hidden; /* Ensures images fit nicely */
+    overflow: hidden; /* Prevents overflow */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Image Styling */
 .grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images maintain aspect ratio */
+    width: 100%; /* Fills the grid box */
+    height: 100%; /* Fills the grid box */
+    object-fit: cover; /* Maintains aspect ratio */
+    display: block; /* Ensures no extra space from inline display */
 }
 
-/* Large items for Bento layout */
-.grid-item.large.horizontal {
-    grid-column: span 2; /* Spans two columns */
-}
 
-.grid-item.large.vertical {
-    grid-row: span 2; /* Spans two rows */
-    grid-column: span 1;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
