@@ -143,11 +143,11 @@ main {
 
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem; /* Adds spacing between items */
     justify-content: center;
-    width: 90%; /* Limits the grid's width */
-    max-width: 800px; /* Prevents it from being too wide */
+    width: 100%; /* Limits the grid's width */
+    max-width: 1000px; /* Prevents it from being too wide */
 }
 
 .grid-item {
