@@ -536,39 +536,73 @@ footer a {
 }
 
 
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    width: 90%;
-    max-width: 800px;
-}
-
-.grid-item {
-    background-color: #ff6f61;
-    color: #fff;
+.grid-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    height: 100px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
 }
 
+/* Bento Grid styles */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Spacing between grid items */
+    width: 80%; /* Width of the grid */
+    max-width: 800px; /* Maximum width for large screens */
+}
+
+/* Grid Items */
+.grid-item {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures images fit nicely */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+}
+
+/* Large items for Bento layout */
 .grid-item.large.horizontal {
-    grid-column: span 2;
+    grid-column: span 2; /* Spans two columns */
 }
 
 .grid-item.large.vertical {
-    grid-row: span 2;
+    grid-row: span 2; /* Spans two rows */
     grid-column: span 1;
 }
 
-.grid-item.large {
-    background-color: #ff9f80;
-    font-size: 2rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+
+    .grid-item.large.horizontal {
+        grid-column: span 2; /* Spans full row in smaller viewports */
+    }
+
+    .grid-item.large.vertical {
+        grid-row: span 1;
+        grid-column: span 2; /* Spans full row in smaller viewports */
+    }
 }
+
+@media (max-width: 480px) {
+    .bento-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column for phones */
+        gap: 5px; /* Smaller spacing */
+    }
+}
+
 
 
 @media (max-width: 768px) {
