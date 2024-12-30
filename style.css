@@ -118,7 +118,6 @@ p{
 }
 
 #product-overview {
-    box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px, url("images/springpergola.png");
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
     background-size: 100%;
     width: 98vw;
@@ -127,9 +126,9 @@ p{
     margin: auto;
     background-repeat: no-repeat;
     position: relative;
-    /*top: 5rem;*/
-    border: black solid 5px;
-    box-shadow:3px 3px 5px 3px rgba(0,0,0,0.3);
+    /*top: 5rem;
+    border: black solid 5px;*/
+    box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 #product-overview h2 {
