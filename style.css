@@ -535,3 +535,46 @@ footer a {
     }
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.grid-item {
+    background-color: #ff6f61;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item.large.horizontal {
+    grid-column: span 2;
+}
+
+.grid-item.large.vertical {
+    grid-row: span 2;
+    grid-column: span 1;
+}
+
+.grid-item.large {
+    background-color: #ff9f80;
+    font-size: 2rem;
+}
