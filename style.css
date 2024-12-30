@@ -119,7 +119,8 @@ p{
 
 #product-overview {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     width: 98vw;
     height: 80vh;
     padding: 0px;
@@ -128,7 +129,7 @@ p{
     position: relative;
     /*top: 5rem;
     border: black solid 5px;*/
-    box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow:rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 #product-overview h2 {
@@ -295,7 +296,7 @@ footer a {
         width: 86rem;
     }
 
-    #product-overview {
+    /*#product-overview {
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
         background-size: 100%;
         width: 180vw;
@@ -304,9 +305,9 @@ footer a {
         margin: auto;
         background-repeat: no-repeat;
         position: relative;
-        /*top: 5rem;*/
+        /*top: 5rem;
         box-shadow:3px 3px 5px 3px rgba(0,0,0,0.3);
-    }
+    }*/
 
     .grid-container {
         margin-left: 20vw;
@@ -329,7 +330,7 @@ footer a {
         width: 78rem;
     }
 
-    #product-overview {
+   /* #product-overview {
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
         background-size: 100%;
         width: 180vw;
@@ -338,9 +339,9 @@ footer a {
         margin: auto;
         background-repeat: no-repeat;
         position: relative;
-        /*top: 5rem;*/
+        /*top: 5rem;
         box-shadow:3px 3px 5px 3px rgba(0,0,0,0.3);
-    }
+    }*/
     
     .grid-container {
         grid-template-columns: 30rem;
@@ -399,7 +400,7 @@ footer a {
         width: 56rem;
     }
 
-    #product-overview {
+   /* #product-overview {
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
         background-size: 100%;
         width: 180vw;
@@ -408,9 +409,9 @@ footer a {
         margin: auto;
         background-repeat: no-repeat;
         position: relative;
-        /*top: 5rem;*/
+        /*top: 5rem;
         box-shadow:3px 3px 5px 3px rgba(0,0,0,0.3);
-    }
+    }*/
     
     .grid-container {
         grid-template-columns: 30rem;
@@ -469,7 +470,7 @@ footer a {
         width: 45rem;
     }
 
-    #product-overview {
+   /* #product-overview {
         background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
         background-size: 100%;
         width: 180vw;
@@ -478,9 +479,9 @@ footer a {
         margin: auto;
         background-repeat: no-repeat;
         position: relative;
-        /*top: 5rem;*/
+        /*top: 5rem;
         box-shadow:3px 3px 5px 3px rgba(0,0,0,0.3);
-    }
+    }*/
     
     .grid-container {
         grid-template-columns: 30rem;
@@ -567,4 +568,49 @@ footer a {
 .grid-item.large {
     background-color: #ff9f80;
     font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    #product-overview {
+        height: 60vh; /* Reduce height for smaller screens */
+    }
+
+    #product-overview h2 {
+        font-size: 2rem; /* Scale down headline font size */
+        bottom: 10%;
+        left: 5%; /* Center more */
+    }
+
+    #product-overview h3 {
+        font-size: 1.5rem; /* Scale down sub-title */
+        bottom: 3%;
+        left: 5%; /* Align better */
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    #product-overview {
+        height: 50vh; /* Further reduce height for phones */
+        padding: 10px;
+    }
+
+    #product-overview h2 {
+        font-size: 1.5rem; /* Smaller headline for phones */
+        bottom: 15%; /* Move up */
+        left: 5%;
+        text-align: center;
+    }
+
+    #product-overview h3 {
+        font-size: 1.2rem; /* Smaller sub-title */
+        bottom: 5%; /* Adjust spacing */
+        left: 5%;
+        text-align: center;
+    }
+
+    #product-overview a {
+        font-size: 1rem; /* Smaller link text */
+    }
 }
