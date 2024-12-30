@@ -3,13 +3,150 @@ html{
    /* height: 100%;*/
 }
 
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #334766; /* Ensure visibility */
+    padding: 1rem;
+    z-index: 1000; /* Keep it above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.main-header__brand img {
+    height: 3rem; /* Reduce logo size for a clean header */
+}
+
+.main-nav__items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__item {
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.main-nav__item--cta a {
+    color: #334766;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav__item--cta a:hover {
+    background-color: #9DB2BF;
+    color: #27374D;
+}
+
+
+#product-overview {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Center the text within the section */
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#product-overview h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    color: #27374D;
+    text-align: center;
+}
+
+#product-overview h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    color: #27374D;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start at the top */
+    align-items: center;
+    background-color: #27374D;
+}
+
+main {
+    margin-top: 5rem; /* Adjust to account for the fixed header */
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; /* Adds spacing between items */
+    justify-content: center;
+    width: 90%; /* Limits the grid's width */
+    max-width: 800px; /* Prevents it from being too wide */
+}
+
+.grid-item {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ensures consistent height for items */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fit the grid boxes */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*body {
     margin: 0;
     display: grid;
     grid-template-rows: auto 8rem;
     padding-top: 1rem;
     height: 100%;
-}*/
+}
 
 h1 {
     color: #DDE6ED;
@@ -128,7 +265,7 @@ p{
     background-repeat: no-repeat;
     position: relative;
     /*top: 5rem;
-    border: black solid 5px;*/
+    border: black solid 5px;
     box-shadow:rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -296,7 +433,7 @@ footer a {
 }
 
 
-/*  help from chat code  */
+/*  help from chat code  
 body {
     display: flex;
     justify-content: center;
@@ -323,17 +460,17 @@ body {
 .grid-item {
     background-color: #eee;
     border-radius: 8px;
-    overflow: hidden; /* Prevents overflow */
+    overflow: hidden; /* Prevents overflow 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .grid-item img {
-    width: 100%; /* Fills the grid box */
-    height: 100%; /* Fills the grid box */
-    object-fit: cover; /* Maintains aspect ratio */
-    display: block; /* Ensures no extra space from inline display */
+    width: 100%; /* Fills the grid box 
+    height: 100%; /* Fills the grid box 
+    object-fit: cover; /* Maintains aspect ratio 
+    display: block; /* Ensures no extra space from inline display 
 }
 
 
