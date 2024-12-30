@@ -149,7 +149,7 @@ main {
 
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem; /* Adds spacing between items */
     justify-content: center;
     width: 100%; /* Limits the grid's width */
