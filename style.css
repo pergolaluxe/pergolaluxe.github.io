@@ -123,6 +123,12 @@ html{
     margin-top: 1rem;
 }
 
+.first-paragraph {
+    margin-top: 5rem;
+    color:#9DB2BF;
+    font-family: "Raleway", sans-serif;
+}
+
 body {
     margin: 0;
     display: flex;
