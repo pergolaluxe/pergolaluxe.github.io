@@ -538,15 +538,12 @@ footer a {
 
 
 
-/*body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}*/
+}
 
 .grid-container {
     display: flex;
@@ -582,72 +579,3 @@ footer a {
 
 
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-    }
-
-    .grid-item.large.horizontal {
-        grid-column: span 2; /* Spans full row in smaller viewports */
-    }
-
-    .grid-item.large.vertical {
-        grid-row: span 1;
-        grid-column: span 2; /* Spans full row in smaller viewports */
-    }
-}
-
-@media (max-width: 480px) {
-    .bento-grid {
-        grid-template-columns: repeat(1, 1fr); /* Single column for phones */
-        gap: 5px; /* Smaller spacing */
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    #product-overview {
-        height: 60vh; /* Reduce height for smaller screens */
-    }
-
-    #product-overview h2 {
-        font-size: 2rem; /* Scale down headline font size */
-        bottom: 10%;
-        left: 5%; /* Center more */
-    }
-
-    #product-overview h3 {
-        font-size: 1.5rem; /* Scale down sub-title */
-        bottom: 3%;
-        left: 5%; /* Align better */
-    }
-}
-
-/* Small screens (phones) */
-@media (max-width: 480px) {
-    #product-overview {
-        height: 50vh; /* Further reduce height for phones */
-        padding: 10px;
-    }
-
-    #product-overview h2 {
-        font-size: 1.5rem; /* Smaller headline for phones */
-        bottom: 15%; /* Move up */
-        left: 5%;
-        text-align: center;
-    }
-
-    #product-overview h3 {
-        font-size: 1.2rem; /* Smaller sub-title */
-        bottom: 5%; /* Adjust spacing */
-        left: 5%;
-        text-align: center;
-    }
-
-    #product-overview a {
-        font-size: 1rem; /* Smaller link text */
-    }
-}
