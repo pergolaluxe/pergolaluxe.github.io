@@ -118,7 +118,8 @@ p{
 }
 
 #product-overview {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
+    background-image: box-shadow rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /*background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");*/
     background-size: 100%;
     width: 98vw;
     height: 80vh;
