@@ -163,7 +163,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px; /* Ensures consistent height for items */
+    height: 300px; /* Ensures consistent height for items */
 }
 
 .grid-item img {
