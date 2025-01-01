@@ -200,6 +200,8 @@ body {
     font-size: 3.5rem;
     color: #27374D;
     text-align: left;
+    font-weight: 700;
+    margin-left: 7rem;
 }
 
 #product-overview h3 {
@@ -209,6 +211,36 @@ body {
     text-align: left;
     margin-top: 1rem;
 }
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    background-color: #fff;
+    color: rgb(206, 204, 204);
+    border: 2px solid grey;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    opacity: 0.9;
+  }
 
 .first-paragraph {
     margin-top: 5rem;
