@@ -204,11 +204,12 @@ body {
     font-weight: 700;
     text-align: left;
     margin-bottom: 1rem; /* Add space below the heading */
-    margin-left: -5rem;
   }
 
   .sub-title {
     font-size: 2.5rem;
+    margin-left: -5rem;
+    color: #27374D;
   }
   
   .hero-buttons {
@@ -236,6 +237,10 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .option3{
+    margin-left: -5rem;
   }
   
   .btn-primary:hover,
