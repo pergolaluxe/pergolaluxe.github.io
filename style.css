@@ -293,6 +293,14 @@ main {
     height: 300px; /* Ensures consistent height for items */
 }
 
+.grid-item h2 {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding-left: 7rem; /* Add padding to match the heading's margin */
+}
+
 /*.grid-item img {
     width: 100%;
     height: 100%;
