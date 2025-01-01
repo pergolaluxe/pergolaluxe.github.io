@@ -184,37 +184,32 @@ body {
 
 #product-overview {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6) 10%, transparent), url("images/springpergola.png");
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image */
-    width: 100%; /* Full width */
-    height: 90vh; /* Full viewport height */
-    display: flex; /* Center the text within the section */
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding-left: 7rem; /* Add padding to match the heading's margin */
     box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    border-radius: .3%;
-}
-
-#product-overview h2 {
+    border-radius: 0.3%;
+  }
+  
+  #product-overview h2 {
     font-family: "Raleway", sans-serif;
     font-size: 3.5rem;
     color: #27374D;
-    text-align: left;
     font-weight: 700;
-    margin-left: 7rem;
-}
-
-#product-overview h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 1.8rem;
-    color: #27374D;
     text-align: left;
-    margin-top: 1rem;
-}
-
-.hero-buttons {
+    margin-bottom: 1rem; /* Add space below the heading */
+  }
+  
+  .hero-buttons {
     display: flex;
     gap: 15px;
+    margin-top: 1rem; /* Space above the buttons */
   }
   
   .btn-primary {
@@ -241,6 +236,7 @@ body {
   .btn-secondary:hover {
     opacity: 0.9;
   }
+  
 
 .first-paragraph {
     margin-top: 5rem;
