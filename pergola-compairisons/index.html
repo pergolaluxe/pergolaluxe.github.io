@@ -47,6 +47,138 @@
     </header>
 <main>
 
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      cursor: pointer;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .filter-container {
+      margin-bottom: 10px;
+    }
+
+    .filter-container select {
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Pergola Comparison Table</h1>
+
+<div class="filter-container">
+  <label for="brandFilter">Filter by Brand: </label>
+  <select id="brandFilter">
+    <option value="all">All Brands</option>
+    <option value="Brand A">Brand A</option>
+    <option value="Brand B">Brand B</option>
+    <option value="Brand C">Brand C</option>
+  </select>
+</div>
+
+<table id="comparisonTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">Brand</th>
+      <th onclick="sortTable(1)">Model</th>
+      <th onclick="sortTable(2)">Price</th>
+      <th onclick="sortTable(3)">Material</th>
+      <th onclick="sortTable(4)">Warranty (Years)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-brand="Brand A">
+      <td>Brand A</td>
+      <td>Model X</td>
+      <td>$1200</td>
+      <td>Wood</td>
+      <td>5</td>
+    </tr>
+    <tr data-brand="Brand B">
+      <td>Brand B</td>
+      <td>Model Y</td>
+      <td>$950</td>
+      <td>Metal</td>
+      <td>3</td>
+    </tr>
+    <tr data-brand="Brand C">
+      <td>Brand C</td>
+      <td>Model Z</td>
+      <td>$1100</td>
+      <td>Aluminum</td>
+      <td>4</td>
+    </tr>
+    <tr data-brand="Brand A">
+      <td>Brand A</td>
+      <td>Model Q</td>
+      <td>$1400</td>
+      <td>Composite</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  // Filter Functionality
+  document.getElementById('brandFilter').addEventListener('change', function () {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#comparisonTable tbody tr');
+
+    rows.forEach(row => {
+      const brand = row.getAttribute('data-brand').toLowerCase();
+      row.style.display = (filter === 'all' || brand === filter) ? '' : 'none';
+    });
+  });
+
+  // Sort Table Functionality
+  function sortTable(columnIndex) {
+    const table = document.getElementById('comparisonTable');
+    const rows = Array.from(table.rows).slice(1); // Exclude header row
+    const isNumeric = !isNaN(rows[0].cells[columnIndex].innerText);
+
+    rows.sort((a, b) => {
+      const cellA = a.cells[columnIndex].innerText.toLowerCase();
+      const cellB = b.cells[columnIndex].innerText.toLowerCase();
+      
+      return isNumeric
+        ? parseFloat(cellA) - parseFloat(cellB)
+        : cellA.localeCompare(cellB);
+    });
+
+    rows.forEach(row => table.appendChild(row)); // Reorder rows in the table
+  }
+</script>
+
+</body>
+</html>
+
+
     <div>
         <p>More Info Coming Soon!</p>
     </div>
