@@ -346,13 +346,13 @@ main {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 10px 15px;
   border-radius: 5px;
-  /*opacity: 0;  Initially hidden */
-  /*transition: opacity 0.3s ease-in-out;*/
+  opacity: 0;  /*Initially hidden */
+  transition: opacity 0.3s ease-in-out;
 }
 
-/*.grid-item:hover .image-overlay {
+.grid-item:hover .image-overlay {
   opacity: 1; /* Show text on hover 
-}*/
+}
 
 
 footer {
