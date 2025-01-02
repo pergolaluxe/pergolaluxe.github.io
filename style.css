@@ -386,6 +386,48 @@ footer a {
 
 
 
+@media (max-width: 768px) {
+  .hero-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+  }
+  .hero-image img {
+      width: 100%;
+      height: auto;
+  }
+  .hero-content {
+      padding: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .bento-grid {
+      grid-template-columns: 1fr; /* Single column */
+  }
+  .grid-item {
+      height: auto; /* Adjust height for single-column view */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  footer a {
+      margin: 0.5rem 0;
+  }
+}
 
 
 /*body {
