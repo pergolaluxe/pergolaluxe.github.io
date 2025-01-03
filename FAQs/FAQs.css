@@ -12,12 +12,12 @@ html{
 }*/
 
 h1 {
-    color: #DDE6ED;
+    color: #27374D;
     text-align: center;
     box-sizing: border-box;
     margin-top: 2rem;
     padding: 0;
-    font-family: 'bodoni moda';
+    font-family: 'raleway' sans-serif;
     font-size: 3.3rem;
 }
 
@@ -225,7 +225,7 @@ p{
 }
 
 .basic-paragraph {
-    color: #9DB2BF;
+    color: #27374D;
     font-size: 1.2rem;
     font-family: 'raleway';
     margin-left: 2rem;
