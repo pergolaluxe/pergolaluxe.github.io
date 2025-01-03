@@ -288,6 +288,7 @@ main {
 }
 
 .grid-item {
+    position: relative;
     background-color: #eee;
     border-radius: 8px;
     overflow: hidden;
