@@ -1,20 +1,12 @@
 
-/*body {
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}*/
-
 .blog-post {
     max-width: 800px;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    margin-top: 3rem;
-    margin-left: 20%;
+    margin: 3rem auto;
+    padding: 1rem;
 }
 
 
@@ -22,7 +14,7 @@
     color: #27374D;
     text-align: center;
     box-sizing: border-box;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 0;
     font-family: 'raleway' sans-serif;
     font-size: 3.3rem;
@@ -141,4 +133,34 @@ footer a {
         width: 38rem;
     }
     
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-post {
+        max-width: 90%; /* Shrinks the width on tablets */
+    }
+
+    .article-title {
+        font-size: 2rem; /* Reduces title size for smaller screens */
+    }
+
+    .basic-paragraph {
+        font-size: 0.9rem; /* Adjusts paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post {
+        max-width: 95%; /* Nearly full width on small screens */
+        padding: 0.5rem; /* Less padding on smaller screens */
+    }
+
+    .article-title {
+        font-size: 1.5rem; /* Further reduce title size for small screens */
+    }
+
+    .basic-paragraph {
+        font-size: 0.8rem; /* Smaller text for better fit */
+    }
 }
