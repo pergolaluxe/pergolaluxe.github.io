@@ -34,10 +34,11 @@ h1 {
     color: #27374D;
     text-align: center;
     box-sizing: border-box;
-    margin-top: 2rem;
+    margin-top: 5rem;
     padding: 0;
     font-family: 'raleway' sans-serif;
     font-size: 3.3rem;
+
 }
 
 
@@ -78,11 +79,23 @@ p{
     }
     
     .main-header {
-      display: flex;
+     /* display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #334766;
+      background-color: #334766;*/
+        position: fixed; /* Keeps the header at the top */
+        top: 0; /* Aligns the header to the very top of the viewport */
+        left: 0; /* Ensures it starts from the left */
+        width: 100%; /* Makes the header span the entire width */
+        z-index: 1000; /* Ensures it stays above other elements */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #334766; /* Adjust as needed */
+        padding: 1rem; /* Optional, to add some spacing */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional, for a slight shadow effect */
     }
+    
     
     
     .main-header__brand {
