@@ -27,6 +27,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 7rem;
 }
 
 
@@ -91,7 +92,6 @@ p{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #334766; /* Adjust as needed */
         padding: 1rem; /* Optional, to add some spacing */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional, for a slight shadow effect */
     }
