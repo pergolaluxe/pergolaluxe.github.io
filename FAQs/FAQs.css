@@ -1,7 +1,4 @@
-html{
-    background-color: #27374D;
-   /* height: 100%;*/
-}
+
 
 /*body {
     margin: 0;
@@ -23,7 +20,7 @@ h1 {
 
 
 p{
-    color: #DDE6ED;
+    color: #27374D;
 }
 
 .fs-4 {
@@ -237,7 +234,6 @@ h2 {
 }
 
 footer {
-    background-color: #334766;
     height: 2.5rem;
     display:flex;
     align-items: center;
@@ -245,7 +241,7 @@ footer {
 }
 
 footer a {
-    color: #9DB2BF;
+    color: #27374D;
     font-size: 1rem;
     font-family: 'raleway';
     margin-left: 5rem;
