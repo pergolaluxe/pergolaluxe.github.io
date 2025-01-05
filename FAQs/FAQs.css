@@ -1,12 +1,4 @@
 
-html {
-
-}
-
-body {
-    
-}
-
 .blog-post {
     max-width: 800px;
     background: #fff;
@@ -120,29 +112,6 @@ footer a {
     margin-top: 2rem;
 }
 
-/*
-@media (max-width: 38rem) {
-    .main-header {
-        width: 39rem;
-    }
-
-    h1 {
-        width: 35rem;
-    }
-    
-    .faq-title {
-        width: 35rem;
-    }
-
-    .basic-paragraph {
-        width: 35rem;
-    }
-
-    footer {
-        width: 38rem;
-    }
-    
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

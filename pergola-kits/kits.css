@@ -328,7 +328,7 @@ padding:0;
     font-size: 1rem;
   }
 
-  /*title*/
+  /*title
   .box2 {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -341,7 +341,7 @@ padding:0;
     font-weight: 600;
   }
 
-  /*selling points*/
+  /*selling points
   .box3 {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -378,7 +378,7 @@ padding:0;
     height: 100%;
   }
 
-  .box5 { /*flat top basic */
+  .box5 { flat top basic 
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -438,7 +438,149 @@ padding:0;
     font-family: 'raleway';
     color: #9DB2BF;
     font-size: 1.2rem;
+  }*/
+
+
+
+/* General Container Styling */
+.box2 {
+  grid-column: span 2;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  color: #27374D;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #334766;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box4, .box7, .box8, .box11, .box12, .box15 {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFF;
+}
+
+.flat-top-image, .angled-image, .wall-image, .peaked-roof-image, .hexa-image, .triangle-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flat-top-image:hover, .angled-image:hover, .wall-image:hover, .peaked-roof-image:hover, .hexa-image:hover, .triangle-image:hover {
+  transform: scale(1.05);
+}
+
+/* Product Details Box Styling */
+.box5, .box6, .box9, .box10, .box13, .box14 {
+  background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #334766;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+h2 a:hover {
+  color: #007BFF;
+}
+
+.toja-price {
+  color: #D32F2F;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toja-pros {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.toja__feature {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14, .box15 {
+      margin-bottom: 1rem;
   }
+
+  .plan {
+      align-items: center;
+      text-align: center;
+  }
+
+  h2 a {
+      font-size: 1.5rem;
+  }
+
+  .toja-price {
+      font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
   .box6 { /*angled roof*/
     grid-column-start: 2;
