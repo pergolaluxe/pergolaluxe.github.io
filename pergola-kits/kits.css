@@ -465,16 +465,16 @@ padding:0;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
+  grid-row-start: 1;
 }
 
 .box4 {
-  grid-column: 1; /* Ensure .box4 is in the first column */
+  grid-column: 2; /* Ensure .box4 is in the first column */
     grid-row: 2;
 }
 
 .box5 {
-  grid-column: 2 / 4; /* Make .box5 span across two columns */
+  grid-column: 3 / 4; /* Make .box5 span across two columns */
     grid-row: 2; 
 }
 
