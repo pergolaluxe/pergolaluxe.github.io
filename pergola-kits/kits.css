@@ -1,7 +1,4 @@
-html{
-    background-color: #27374D;
-   /* height: 100%;*/
-}
+
 
 /*body {
     margin: 0;
@@ -12,7 +9,7 @@ html{
 }*/
 
 h1 {
-    color: #DDE6ED;
+    color: #27374D;
     text-align: center;
     box-sizing: border-box;
     margin: 0;
@@ -20,11 +17,11 @@ h1 {
 }
 
 h2{
-    color: #9DB2BF
+    color: #27374D
 }
 
 p{
-    color: #DDE6ED;
+    color: #27374D;
 }
 
 .fs-4 {
@@ -63,13 +60,13 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #334766;
+    background-color: #27374D;
   }
   
   
   .main-header__brand {
     font-family: 'raleway';
-    color: #9DB2BF;
+    color: #27374D;
     font-size: 2rem;
     text-decoration: none;
     margin: 0 1rem;
