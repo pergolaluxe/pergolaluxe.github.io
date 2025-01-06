@@ -253,7 +253,7 @@ padding:0;
 .wrapper {
   display: grid;
   grid-template-columns: 20% 39% 39%;
-  grid-template-rows: 4rem 3rem 22rem 22rem 22rem 22rem 22rem 22rem 3rem 3rem 22rem 22rem;
+  /*grid-template-rows: 4rem 3rem 32rem 29rem 36rem 32rem 32rem 25rem 3rem 3rem 22rem 22rem;*/
   margin-top:18rem;
   grid-column-gap: 20px;
   grid-row-gap: 5rem;
