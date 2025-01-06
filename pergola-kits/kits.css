@@ -466,15 +466,6 @@ padding:0;
   
 }
 
-.box4 {
-    grid-column: 1 / 3; /* Spans columns 1 to 2 */
-    grid-row: 1;
-}
-
-.box5 {
-  grid-column: 3; /* Places in the third column */
-    grid-row: 1;
-}
 
 .box4, .box7, .box8, .box11, .box12, .box15 {
   text-align: center;
