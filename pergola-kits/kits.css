@@ -871,13 +871,17 @@ h2 a:hover {
   grid-row-end: 11;
   font-family: 'raleway';
   font-weight: 200;
-  color: #27374D;
+  color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-content: center;
   align-items: center;
   font-size: 2rem;
-  background-color: #9DB2BF;
+  background-color: #334766;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
 }
 
 .box18 {
