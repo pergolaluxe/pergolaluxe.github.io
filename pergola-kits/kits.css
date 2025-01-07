@@ -850,10 +850,14 @@ h2 a:hover {
   grid-row-start: 9;
   grid-row-end: 10;
   font-family: 'raleway';
-  font-size: 3rem;
-  color:#9DB2BF;
+  font-size: 2.5rem;
+  color:#27374D;
   text-align: center;
-  font-weight: 600;
+  font-weight: bold;
+  padding:1 rem;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*HD subtitle*/
