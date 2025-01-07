@@ -256,7 +256,7 @@ padding:0;
   /*grid-template-rows: 4rem 3rem 32rem 29rem 36rem 32rem 32rem 25rem 3rem 3rem 22rem 22rem;*/
   margin-top:18rem;
   grid-column-gap: 20px;
-  grid-row-gap: 5rem;
+  grid-row-gap: 3rem;
 }
 
   .box1 {
@@ -467,6 +467,9 @@ padding:0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  font-size: 1.5rem;
 }
 
 .box4 {
