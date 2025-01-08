@@ -423,6 +423,7 @@ padding:0;
   .flat-top-subtitle {
     font-weight: 300;
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .toja-pros {
@@ -514,6 +515,7 @@ padding:0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: fit-content;
   color: #27374D;
+  font-size: 1.2rem;
 }
 
 .plan {
