@@ -209,7 +209,7 @@ padding:0;
 }
 */
 #background-video {
-    width: 98vw;
+    width: 95vw;
     height: 75vh;
     object-fit: cover;
     /*position: fixed;*/
@@ -218,6 +218,7 @@ padding:0;
     top: 10rem;
     bottom: 0;
     z-index: -1;
+    margin-top: 1rem;
   }
 
   .flex-title-container {
