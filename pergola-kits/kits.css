@@ -303,12 +303,12 @@ padding:0;
   }
 
   .box1 a:active {
-    color:#27374D;
+    color:#DDE6ED;
     text-decoration: none;
   }
 
   .box1 a:visited {
-    color:#27374D;
+    color:#DDE6ED;
     text-decoration: none;
   }
 
@@ -626,6 +626,7 @@ h2 a:hover {
   .angle-subtitle {
     font-weight: 300;
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .box7 {
@@ -694,6 +695,7 @@ h2 a:hover {
     font-weight: 300;
     font-family: 'raleway';
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .toja-pros {
@@ -727,6 +729,7 @@ h2 a:hover {
     font-weight: 300;
     font-family: 'raleway';
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .box11 {
@@ -796,6 +799,7 @@ h2 a:hover {
     font-weight: 300;
     font-family: 'raleway';
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .toja-pros {
@@ -1223,14 +1227,13 @@ grid-row-end: 13;
 }
 
 footer {
-  background-color: #334766;
   height: 2.5rem;
   display:flex;
   align-items: center;
 }
 
 footer a {
-  color: #9DB2BF;
+  color: #27374D;
   font-size: 1rem;
   font-family: 'raleway';
   margin-left: 5rem;
