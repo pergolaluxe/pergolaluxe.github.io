@@ -833,6 +833,7 @@ h2 a:hover {
     font-weight: 300;
     font-family: 'raleway';
     color:#27374D;
+    font-size: 1.2rem;
   }
 
   .box15 {
@@ -847,7 +848,7 @@ h2 a:hover {
     width: 24rem;
     display: flex;
     vertical-align: middle;
-    height: 22rem;
+    height: 19.2rem;
   }
 
   .triangle-image {
