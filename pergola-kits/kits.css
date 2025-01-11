@@ -449,7 +449,7 @@ padding:0;
   font-weight: bold;
   padding: 1rem;
   background-color: #F5F5F5;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   grid-row-start: 1;
 }
@@ -462,7 +462,7 @@ padding:0;
   color: #FFF;
   font-family: 'Raleway', sans-serif;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   grid-row-start: 2;
   grid-column-start: 2;
@@ -471,12 +471,12 @@ padding:0;
 }
 
 .box4 {
-  grid-column: 2; /* Ensure .box4 is in the first column */
-    grid-row: 3;
+  grid-column: 3; /* Ensure .box4 is in the first column */
+    grid-row: 4;
 }
 
 .box5 {
-  grid-column: 3 / 4; /* Make .box5 span across two columns */
+  grid-column: 2 / 3; /* Make .box5 span across two columns */
     grid-row: 3; 
 }
 
@@ -484,7 +484,7 @@ padding:0;
 .box4, .box7, .box8, .box11, .box12, .box15 {
   text-align: center;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #FFF;
 }
@@ -492,7 +492,7 @@ padding:0;
 .flat-top-image {
   width: 85%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -511,7 +511,7 @@ padding:0;
 .box5, .box6, .box9, .box10, .box13, .box14 {
   background-color: #F5F5F5;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: fit-content;
   color: #27374D;
@@ -663,16 +663,16 @@ h2 a:hover {
 
 
   .box8 { /*wall pic*/
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
     background: white;
   }
 
   .box9 { /*wall*/
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 6;
   }
@@ -767,16 +767,16 @@ h2 a:hover {
   }
 
   .box12 {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 7;
     grid-row-end: 8;
     background-color: white;
   }
 
   .box13 { /*hexa*/
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 7;
     grid-row-end: 8;
   }
@@ -870,7 +870,7 @@ h2 a:hover {
   font-weight: bold;
   padding:1 rem;
   background-color: #F5F5F5;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -890,7 +890,7 @@ h2 a:hover {
   font-size: 2rem;
   background-color: #334766;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
 }
@@ -1092,7 +1092,7 @@ grid-row-end: 13;
   font-weight: bold;
   padding: 1rem;
   background-color: #F5F5F5;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   grid-row-start: 14;
   grid-row-end: 15;
@@ -1109,7 +1109,7 @@ grid-row-end: 13;
   color: #FFF;
   font-family: 'Raleway', sans-serif;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   grid-row-start: 15;
   grid-row-end: 16;
