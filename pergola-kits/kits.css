@@ -471,7 +471,7 @@ padding:0;
 }
 
 .box4 {
-  grid-column: 3; /* Ensure .box4 is in the first column */
+  grid-column: 3 / 4; /* Ensure .box4 is in the first column */
     grid-row: 4;
 }
 
