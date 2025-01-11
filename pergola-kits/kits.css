@@ -582,28 +582,6 @@ h2 a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       
   .box6 { /*angled roof*/
     grid-column-start: 2;
@@ -896,8 +874,8 @@ h2 a:hover {
 }
 
 .box18 {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 11;
   grid-row-end: 12;
 }
@@ -917,10 +895,17 @@ h2 a:hover {
 }
 
 .box19 {
-grid-column-start: 3;
-grid-column-end: 4;
+grid-column-start: 2;
+grid-column-end: 3;
 grid-row-start: 11;
 grid-row-end: 12;
+background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  color: #27374D;
+  font-size: 1.2rem;
 }
 
 .cedar-title {
@@ -958,10 +943,17 @@ grid-row-end: 12;
 
 
 .box20 { 
-grid-column-start: 2;
-grid-column-end: 3;
+grid-column-start: 3;
+grid-column-end: 4;
 grid-row-start: 12;
 grid-row-end: 13;
+background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  color: #27374D;
+  font-size: 1.2rem;
 }
 
 .cedar-title {
@@ -1000,8 +992,8 @@ grid-row-end: 13;
 }
 
 .box21 {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 12;
   grid-row-end: 13;
 }
@@ -1020,10 +1012,17 @@ grid-row-end: 13;
 }
 
 .box22 { 
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 13;
   grid-row-end: 14;
+  background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  color: #27374D;
+  font-size: 1.2rem;
   }
 
   .cedar-title {
@@ -1063,8 +1062,8 @@ grid-row-end: 13;
   
   
   .box23 {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 13;
     grid-row-end: 14;
   }
@@ -1143,6 +1142,13 @@ grid-row-end: 13;
   grid-column-end: 4;
   grid-row-start: 16;
   grid-row-end: 17;
+  background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  color: #27374D;
+  font-size: 1.2rem;
 }
 
 .bjorn-title {
@@ -1184,6 +1190,13 @@ grid-row-end: 13;
   grid-column-end: 4;
   grid-row-start: 17;
   grid-row-end: 18;
+  background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  color: #27374D;
+  font-size: 1.2rem;
 }
 
 .pylex-title {
