@@ -1108,4 +1108,103 @@ footer a {
 
 
 
- 
+ /* Responsive Layout for Smaller Screens */
+@media (max-width: 1024px) {
+  .wrapper {
+      grid-template-columns: 1fr 1fr; /* Adjust to two columns */
+  }
+
+  .video-title, .video-subtitle {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+      grid-template-columns: 1fr; /* Stack items in one column */
+  }
+
+  .video-title, .video-subtitle {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+  }
+
+  #background-video {
+      height: 50vh; /* Reduce video height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-title, .video-subtitle {
+      font-size: 1.2rem;
+  }
+
+  .check-price-btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+  }
+}
+
+/* Flex Title Container */
+.flex-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Box Styling */
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14, .box15 {
+  padding: 1rem;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Image Styling */
+.flat-top-image, .angled-image, .wall-image, .peaked-roof-image, .hexa-image, .triangle-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flat-top-image:hover, .angled-image:hover, .wall-image:hover, .peaked-roof-image:hover, .hexa-image:hover, .triangle-image:hover {
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+.check-price-btn {
+  background-color: #007BFF;
+  color: #FFF;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-price-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Typography */
+.video-title {
+  font-family: 'Raleway', sans-serif;
+  color: #9DB2BF;
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.video-subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: #9DB2BF;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
