@@ -1108,64 +1108,7 @@ footer a {
 
 
 
- /* Responsive Layout for Smaller Screens */
-@media (max-width: 1024px) {
-  .wrapper {
-      grid-template-columns: 1fr; /* Adjust to two columns */
-  }
-
-}
-
-@media (max-width: 768px) {
-  .wrapper {
-      grid-template-columns: 1fr; /* Stack items in one column */
-  }
-
-  .video-title, .video-subtitle {
-      font-size: 1.5rem;
-      margin: 1rem 0;
-  }
-
-  #background-video {
-      height: 50vh; /* Reduce video height for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .video-title, .video-subtitle {
-      font-size: 1.2rem;
-  }
-
-  .check-price-btn {
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-  }
-}
-
-/* Flex Title Container */
-.flex-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 1rem 0;
-}
 
 
 
-/* Button Styling */
-.check-price-btn {
-  background-color: #007BFF;
-  color: #FFF;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.check-price-btn:hover {
-  background-color: #0056b3;
-}
