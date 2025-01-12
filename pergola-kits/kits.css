@@ -339,6 +339,22 @@ p{
   font-size: 1.2rem;
 }
 
+.check-price-btn {
+  background-color: #007BFF; /* Button background color */
+  color: #FFF; /* Button text color */
+  border: none;
+  padding: 0.75rem 1.5rem; /* Padding inside the button */
+  font-size: 1rem;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-price-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 .plan {
   display: flex;
   flex-direction: column;
