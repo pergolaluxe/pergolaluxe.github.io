@@ -1155,6 +1155,55 @@ footer a {
   grid-row-gap: 3rem;
 }
 
+.box4 {
+  grid-row-start: 4;
+}
+
+.box5 {
+  grid-row-start: 3;
+}
+
+.box6 {
+  grid-row-start: 5;
+}
+
+.box7 {
+  grid-row-start: 6;
+}
+
+.box8 {
+  grid-row-start: 8;
+}
+
+.box9 {
+  grid-row-start: 7;
+}
+
+.box10 {
+  grid-row-start: 9;
+}
+
+.box11 {
+  grid-row-start: 10;
+}
+
+.box12 {
+  grid-row-start: 12;
+}
+
+.box13 {
+  grid-row-start: 11;
+}
+
+.box14 {
+  grid-row-start: 13;
+}
+
+.box15 {
+  grid-row-start: 14;
+}
+
+
 
 }
 
