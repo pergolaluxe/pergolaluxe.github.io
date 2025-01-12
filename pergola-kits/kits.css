@@ -1147,6 +1147,14 @@ footer a {
   margin-top: -0.5rem;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 18rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 3rem;
+}
+
 
 }
 
