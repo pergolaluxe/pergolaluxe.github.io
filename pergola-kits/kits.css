@@ -1157,50 +1157,62 @@ footer a {
 
 .box4 {
   grid-row-start: 4;
+  grid-column: 2/4;
 }
 
 .box5 {
   grid-row-start: 3;
+  grid-column: 2/4;
 }
 
 .box6 {
   grid-row-start: 5;
+  grid-column: 2/4;
 }
 
 .box7 {
   grid-row-start: 6;
+  grid-column: 2/4;
 }
 
 .box8 {
   grid-row-start: 8;
+  grid-column: 2/4;
 }
 
 .box9 {
   grid-row-start: 7;
+  grid-column: 2/4;
 }
 
 .box10 {
   grid-row-start: 9;
+  grid-column: 2/4;
 }
 
 .box11 {
   grid-row-start: 10;
+  grid-column: 2/4;
 }
 
 .box12 {
   grid-row-start: 12;
+  grid-column: 2/4;
 }
 
 .box13 {
   grid-row-start: 11;
+  grid-column: 2/4;
 }
 
 .box14 {
   grid-row-start: 13;
+  grid-column: 2/4;
 }
 
 .box15 {
   grid-row-start: 14;
+  grid-column: 2/4;
 }
 
 
