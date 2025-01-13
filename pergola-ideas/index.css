@@ -7,6 +7,11 @@ h1 {
     margin-bottom: 5rem;
 }
 
+.header{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 h2{
     color: #334766;
 }
