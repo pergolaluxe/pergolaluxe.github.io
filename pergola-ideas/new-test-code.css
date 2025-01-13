@@ -1,9 +1,4 @@
 
-
-
-
-
-
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -11,7 +6,6 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -186,132 +180,3 @@ body {
 
 
 
-
-.blog-post {
-    max-width: 800px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 3rem auto;
-    padding: 1rem;
-}
-
-
-.article-title {
-    color: #27374D;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 3rem;
-    padding: 0;
-    font-family: 'raleway' sans-serif;
-    font-size: 3.3rem;
-}
-
-
-p{
-    color: #27374D;
-}
-
-.fs-4 {
-    font-family: "bodoni moda", serif;
-  }
-  
-  #main-logo {
-      font-family: "Bodoni Moda", serif;
-      font-weight: bold;
-      font-style: italic;
-      font-size: 2rem;
-      margin-top: 1.2rem;
-      margin-bottom: 0rem;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    @media (max-width: 40rem) {
-      #main-logo {
-          font-size: 2rem;
-      }
-    }
-    
-    .section-title h2 {
-    font-family: 'raleway';
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: lighter;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-    }
-    
-
-    
-
-.faq-title {
-    color: #27374D;
-    font-size: 1.8rem;
-    font-family: 'raleway';
-    margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-.basic-paragraph {
-    color: #27374D;
-    font-size: 1.2rem;
-    font-family: 'raleway';
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-h2 {
-    font-weight: 300;
-}
-
-footer {
-    height: 2.5rem;
-    display:flex;
-    align-items: center;
-    margin-top: 6rem;
-}
-
-footer a {
-    color: #27374D;
-    font-size: 1rem;
-    font-family: 'raleway';
-    margin-left: 5rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .blog-post {
-        max-width: 90%; /* Shrinks the width on tablets */
-    }
-
-    .article-title {
-        font-size: 2rem; /* Reduces title size for smaller screens */
-    }
-
-    .basic-paragraph {
-        font-size: 0.9rem; /* Adjusts paragraph font size */
-    }
-}
-
-@media (max-width: 480px) {
-    .blog-post {
-        max-width: 95%; /* Nearly full width on small screens */
-        padding: 0.5rem; /* Less padding on smaller screens */
-    }
-
-    .article-title {
-        font-size: 1.5rem; /* Further reduce title size for small screens */
-    }
-
-    .basic-paragraph {
-        font-size: 0.8rem; /* Smaller text for better fit */
-    }
-}
