@@ -1,3 +1,76 @@
+.blog-post {
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+
+
+.container {
+width: 80%;
+margin: 0 auto;
+padding: 20px;
+}
+
+.product {
+margin-bottom: 40px;
+}
+
+.product h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.carousel {
+position: relative;
+overflow: hidden;
+width: 100%;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.carousel-images {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+width: 100%;
+height: auto;
+}
+
+.carousel-buttons {
+position: absolute;
+top: 50%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+background-color: rgba(0, 0, 0, 0.5);
+border: none;
+color: white;
+font-size: 18px;
+padding: 10px;
+cursor: pointer;
+}
+
+.product-description {
+margin-top: 10px;
+font-size: 16px;
+line-height: 1.6;
+}
+
+
+
+
+
 footer {
     height: 2.5rem;
     display:flex;
