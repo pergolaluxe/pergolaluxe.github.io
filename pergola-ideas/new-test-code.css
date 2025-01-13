@@ -40,7 +40,7 @@ body {
 .post-title {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #222;
+    color: #27374D;
 }
 
 .post-meta {
@@ -101,7 +101,7 @@ body {
 .share-icon {
     text-decoration: none;
     color: #fff;
-    background: #007BFF;
+    background: #27374D;
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 0.9rem;
