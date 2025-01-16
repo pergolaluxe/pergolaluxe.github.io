@@ -71,6 +71,7 @@ h3 {
     font-weight: bold;
     display: flex;
     align-items: center;
+    font-family: 'raleway' sans-serif;
 }
 
 .price-icons {
