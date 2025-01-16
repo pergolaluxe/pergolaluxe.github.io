@@ -84,6 +84,17 @@ h3 {
     font-style: normal; /* Ensures that the icons aren't italicized */
 }
 
+.rating-icons {
+    margin-left: 10px;
+    display: flex;
+}
+
+.rating-icons i {
+    margin-right: 5px;
+    color: #27374D; /* You can change the color to represent different price levels */
+    font-style: normal; /* Ensures that the icons aren't italicized */
+}
+
 
 
 footer {
