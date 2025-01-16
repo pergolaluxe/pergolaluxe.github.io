@@ -31,3 +31,17 @@ function getTranslateX(element) {
     const matrix = new WebKitCSSMatrix(style.transform);
     return matrix.m41;
 }
+
+
+ // Example price level, where 3 indicates medium price range
+ const priceLevel = 3; // Adjust this value to change the number of icons
+
+ // Select the price icons container
+ const priceIconsContainer = document.getElementById('priceIcons');
+
+ // Generate icons based on the price level
+ for (let i = 0; i < priceLevel; i++) {
+     const icon = document.createElement('i');
+     icon.textContent = '💲'; // or any other icon
+     priceIconsContainer.appendChild(icon);
+ }
