@@ -66,6 +66,23 @@ line-height: 1.6;
 }
 
 
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.price-icons {
+    margin-left: 10px;
+    display: flex;
+}
+
+.price-icons i {
+    margin-right: 5px;
+    color: green; /* You can change the color to represent different price levels */
+    font-style: normal; /* Ensures that the icons aren't italicized */
+}
 
 
 
