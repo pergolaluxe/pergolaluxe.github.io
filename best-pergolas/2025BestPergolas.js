@@ -1,7 +1,7 @@
 function nextSlide(carouselId) {
     const carousel = document.querySelector(`#${carouselId} .carousel-images`);
     const totalImages = carousel.children.length;
-    const imageWidth = carousel.children[0].getBoundingClientRect().width;
+    const imageWidth = carousel.children[0].clientWidth;
     const currentTranslateX = getTranslateX(carousel);
     const maxTranslateX = -(imageWidth * (totalImages - 1));
 
@@ -14,7 +14,7 @@ function nextSlide(carouselId) {
 
 function prevSlide(carouselId) {
     const carousel = document.querySelector(`#${carouselId} .carousel-images`);
-    const imageWidth = carousel.children[0].getBoundingClientRect().width;
+    const imageWidth = carousel.children[0].clientWidth;
     const currentTranslateX = getTranslateX(carousel);
 
     if (currentTranslateX < 0) {
