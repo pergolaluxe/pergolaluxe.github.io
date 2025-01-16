@@ -33,14 +33,4 @@ function getTranslateX(element) {
 }
 
 
-  // Example dynamic price level
-  const priceLevel = 3; // Adjust the number for different price levels
-  const priceIconsContainer = document.getElementById('priceIcons');
-
-  // Add money icons dynamically
-  for (let i = 0; i < priceLevel; i++) {
-      const icon = document.createElement('i');
-      icon.classList.add('icon');
-      icon.textContent = '💵'; // Money icon for pricing
-      priceIconsContainer.appendChild(icon);
-  }
+ 
