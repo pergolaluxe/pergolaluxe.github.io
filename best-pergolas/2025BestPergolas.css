@@ -96,6 +96,22 @@ line-height: 1.6;
     font-style: normal; /* Ensures that the icons aren't italicized */
 }
 
+.icon-text {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 10px; /* Adds space between the icon and the text */
+}
+
+.icon-text i {
+    font-size: 24px; /* Adjust icon size as needed */
+    color: #333; /* Icon color */
+}
+
+.icon-text p {
+    margin: 0; /* Removes default paragraph margins */
+    font-size: 16px; /* Adjust text size as needed */
+    color: #555; /* Text color */
+}
 
 
 footer {
