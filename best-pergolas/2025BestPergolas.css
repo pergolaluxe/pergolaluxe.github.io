@@ -114,6 +114,16 @@ line-height: 1.6;
     color: #555; /* Text color */
 }
 
+.toja-price {
+    font-family: 'raleway';
+    font-weight: 400;
+  }
+
+
+  a:visited {
+    color: #27374D; 
+    text-decoration: none;
+  }
 
 footer {
     height: 2.5rem;
