@@ -100,12 +100,12 @@ line-height: 1.6;
     display: flex;
     align-items: center; /* Aligns items vertically in the center */
     gap: 10px; /* Adds space between the icon and the text */
-    margin: .35rem;
+    margin: .4rem;
 }
 
 .icon-text i {
     font-size: 24px; /* Adjust icon size as needed */
-    color: green; /* Icon color */
+    color: #27374D; /* Icon color */
 }
 
 .icon-text p {
