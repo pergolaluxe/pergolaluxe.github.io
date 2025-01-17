@@ -125,6 +125,22 @@ line-height: 1.6;
     text-decoration: none;
   }
 
+  .check-price-btn {
+    background-color: #334766; /* Button background color */
+    color: #FFF; /* Button text color */
+    border: none;
+    padding: 0.75rem 1.5rem; /* Padding inside the button */
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .check-price-btn:hover {
+    background-color: #161f2c; /* Darker shade on hover */
+  }
+
 footer {
     height: 2.5rem;
     display:flex;
