@@ -72,6 +72,7 @@ line-height: 1.6;
     display: flex;
     align-items: center;
     font-family: 'raleway' sans-serif;
+    margin-top: 1rem;
 }
 
 .price-icons {
@@ -117,6 +118,7 @@ line-height: 1.6;
 .toja-price {
     font-family: 'raleway';
     font-weight: 400;
+    margin-top: 1.3rem;
   }
 
 
