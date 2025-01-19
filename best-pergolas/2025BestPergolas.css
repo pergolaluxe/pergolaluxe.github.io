@@ -201,6 +201,15 @@ line-height: 1.6;
 }
 }
 
+.bottomPageIcon {
+    font-size: 2rem;
+}
+
+.bottomPageIcon i {
+    font-size: 24px; /* Adjust icon size as needed */
+    color: #27374D;
+}
+
 footer {
     height: 2.5rem;
     display:flex;
