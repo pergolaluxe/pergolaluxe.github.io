@@ -215,6 +215,11 @@ line-height: 1.6;
     background-color: #27374D;
 }
 
+.btnbtn-primary a:visited {
+    background-color: #27374D;
+    color: #fff;
+}
+
 footer {
     height: 2.5rem;
     display:flex;
