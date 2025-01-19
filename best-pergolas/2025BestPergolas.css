@@ -210,6 +210,11 @@ line-height: 1.6;
     color: #27374D;
 }
 
+.btnbtn-primary {
+    color: #FFF;
+    background-color: #27374D;
+}
+
 footer {
     height: 2.5rem;
     display:flex;
