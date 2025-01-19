@@ -194,6 +194,11 @@ line-height: 1.6;
 }
 /*table test end*/
 
+@media (max-width: 418px) {
+.ratings-table td {
+    font-size: smaller;
+}
+}
 
 footer {
     height: 2.5rem;
