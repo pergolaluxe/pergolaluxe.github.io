@@ -66,6 +66,12 @@ body {
 }
 
 /* Content section */
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .post-content {
     padding: 20px;
 }
