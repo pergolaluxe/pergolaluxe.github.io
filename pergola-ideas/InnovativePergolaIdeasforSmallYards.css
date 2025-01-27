@@ -63,6 +63,7 @@ body {
     display: block;
     margin-top: 20px;
     border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 /* Content section */
@@ -76,9 +77,6 @@ p {
     padding: 20px;
 }
 
-img {
-    margin-bottom: 1rem;
-}
 
 .post-content h2 {
     font-size: 1.8rem;
