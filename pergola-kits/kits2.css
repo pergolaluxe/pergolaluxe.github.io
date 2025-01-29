@@ -1,3 +1,46 @@
+#background-video {
+  width: 95vw;
+  height: 75vh;
+  object-fit: cover;
+  /*position: fixed;*/
+  left: 1rem;
+  right: 0;
+  top: 10rem;
+  bottom: 0;
+  z-index: -1;
+  margin-top: 1rem;
+}
+
+.flex-title-container {
+  display: felx;
+}
+
+.video-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#9DB2BF;
+  font-size: 4rem;
+  font-family: 'raleway';
+  margin-top: -22rem;
+  margin-left: 49rem;
+}
+
+.video-subtitle {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:#9DB2BF;
+  font-size: 2rem;
+  font-family: 'raleway';
+  margin-left: 49rem;
+  margin-top: -0.5rem;
+}
+
+
+
+
+
 /* Product Details Box Styling */
 .box5 {
     background-color: #F5F5F5;
