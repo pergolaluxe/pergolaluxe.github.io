@@ -403,7 +403,7 @@ h2 a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive Design */
+/* Responsive Design 1/29 test
 @media (max-width: 768px) {
   .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14, .box15 {
       margin-bottom: 1rem;
@@ -421,7 +421,7 @@ h2 a:hover {
   .toja-price {
       font-size: 1.2rem;
   }
-}
+}*/
 
 
 
@@ -1157,7 +1157,7 @@ footer a {
   margin-left: 33rem;
   margin-top: -0.5rem;
 }
-
+/*   1/29 test
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -1228,7 +1228,7 @@ footer a {
 
 
 
-}
+}*/
 
 
 /*1/29 test*/
