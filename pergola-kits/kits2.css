@@ -1,0 +1,79 @@
+/* Product Details Box Styling */
+.box5 {
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    color: #27374D;
+    font-size: 1.2rem;
+    text-align: center; /* Centers text and image */
+  }
+  
+  /* Image Styling Inside the Text Box */
+  .flat-top-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .flat-top-image {
+    width: 90%; /* Adjusts image width inside the text box */
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .flat-top-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Buttons Responsive Design */
+  .check-price-btn {
+    background-color: #334766;
+    color: #FFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full-width for mobile */
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  .check-price-btn:hover {
+    background-color: #161f2c;
+  }
+  
+  /* Make layout responsive for smaller screens */
+  @media (max-width: 768px) {
+    .box5 {
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .flat-top-image-container {
+      width: 100%;
+    }
+  
+    .flat-top-image {
+      width: 100%; /* Makes image responsive for mobile */
+      max-width: 300px; /* Adjusts size for smaller screens */
+    }
+  
+    .toja-price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .check-price-btn {
+      width: 90%;
+    }
+  }
+  
