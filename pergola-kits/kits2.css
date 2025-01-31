@@ -141,7 +141,7 @@ a:visited {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   
   .flat-top-image {
@@ -154,6 +154,10 @@ a:visited {
   
   .flat-top-image:hover {
     transform: scale(1.05);
+  }
+
+  .flat-top-title {
+    margin-top: 1rem;
   }
   
   /* Buttons Responsive Design */
