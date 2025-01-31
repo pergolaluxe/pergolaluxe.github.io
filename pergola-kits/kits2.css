@@ -108,6 +108,10 @@ a:visited {
   text-decoration: none;
 }
 
+.ul {
+  list-style-position: inside;
+}
+
 .li {
   font-family: 'raleway';
   font-weight: 400;
