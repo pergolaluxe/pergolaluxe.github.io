@@ -37,6 +37,17 @@
   margin-top: -0.5rem;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 1rem; /* Adds spacing on small screens */
+  /*grid-template-columns: 20% 39% 39%;      1/29test*/ 
+  /*grid-template-rows: 4rem 3rem 32rem 29rem 36rem 32rem 32rem 25rem 3rem 3rem 22rem 22rem;*/
+  margin-top:18rem;
+  /*grid-column-gap: 20px;
+  grid-row-gap: 3rem;   1/29 test*/
+}
+
 .box1 {
   grid-column-start: 1;
   grid-column-end: 2;
