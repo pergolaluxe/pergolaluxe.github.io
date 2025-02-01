@@ -37,6 +37,46 @@
   margin-top: -0.5rem;
 }
 
+@media (max-width: 480px) {
+
+  #background-video {
+    
+    width: 60rem;
+    height: 75vh;
+    object-fit: cover;
+    left: 1rem;
+    right: 0;
+    top: 10rem;
+    bottom: 0;
+    z-index: -1;
+    margin-top: 1rem;
+  }
+  
+  .video-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9DB2BF;
+    font-size: 2rem;
+    font-family: 'raleway';
+    margin-top: -19rem;
+    margin-left: 37rem;
+    width: 55vw;
+  }
+  
+  .video-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9DB2BF;
+    font-size: 1.3rem;
+    font-family: 'raleway';
+    width: 95vw;
+    margin-left: 33rem;
+    margin-top: -0.5rem;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -62,8 +102,8 @@
   }
 
 .nav-title {
-  margin-top: 1rem;
-  font-size: 2rem;
+  margin-top: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   text-align: left;
   margin-left: .4rem;
