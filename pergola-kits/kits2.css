@@ -158,6 +158,14 @@ a:visited {
   }
 
   .flat-top-title {
+    margin-top: 2rem;
+  }
+
+  .flat-top-subtitle {
+    margin-top: 1rem;
+  }
+
+  .toja-price {
     margin-top: 1rem;
   }
   
