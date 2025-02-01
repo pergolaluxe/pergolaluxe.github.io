@@ -168,6 +168,10 @@ a:visited {
   .toja-price {
     margin-top: 1rem;
   }
+
+  .toja-pros {
+    margin-top: 2rem;
+  }
   
   /* Buttons Responsive Design */
   .check-price-btn {
