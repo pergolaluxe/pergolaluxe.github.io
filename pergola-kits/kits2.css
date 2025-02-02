@@ -234,6 +234,10 @@ a:visited {
   
   /* Make layout responsive for smaller screens */
   @media (max-width: 768px) {
+    .wrapper {
+      width:max-content;
+    }
+
     .box5 {
       text-align: center;
       padding: 1rem;
