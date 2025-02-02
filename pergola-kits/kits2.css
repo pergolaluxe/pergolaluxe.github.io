@@ -41,7 +41,7 @@
 
   #background-video {
     
-    width: 60rem;
+    width: 100vw;
     height: 75vh;
     object-fit: cover;
     left: 1rem;
