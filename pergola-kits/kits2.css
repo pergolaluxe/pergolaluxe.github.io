@@ -1,8 +1,234 @@
+/* 📌 GENERAL IMPROVEMENTS */
+body {
+  font-size: 16px; /* Default text size */
+  line-height: 1.6; /* Improve readability */
+  font-family: 'Raleway', sans-serif;
+}
+
+.container-fluid {
+  padding: 0 1rem;
+}
+
+/* 📌 NAVIGATION BAR */
+.navbar {
+  padding: 0.8rem 1rem;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem; /* Increase readability */
+  padding: 10px 15px;
+}
+
+/* 📌 BACKGROUND VIDEO */
+#background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: 0;
+}
+
+/* 📌 VIDEO TITLE & SUBTITLE */
+.flex-title-container {
+  text-align: center;
+  margin-top: -15rem;
+}
+
+.video-title {
+  font-size: 2.5rem; /* Bigger title */
+  font-weight: bold;
+  color: #9DB2BF;
+  margin: 0 auto;
+}
+
+.video-subtitle {
+  font-size: 1.5rem;
+  color: #9DB2BF;
+  margin-top: 0.5rem;
+}
+
+/* 📌 MAIN CONTENT CONTAINER */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Stack everything for mobile */
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* 📌 SIDE MENU */
+.box1 {
+  background-color: #27374D;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.nav-title {
+  font-size: 1.8rem; /* Bigger title */
+  color: #DDE6ED;
+  text-align: center;
+}
+
+.navigtion-menu {
+  list-style: none;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.navigtion-menu li {
+  padding: 5px 0;
+}
+
+/* 📌 PRODUCT BOX */
+.box5 {
+  background-color: #F5F5F5;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 📌 PRODUCT IMAGE */
+.flat-top-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.flat-top-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 📌 PRODUCT TITLE */
+.flat-top-title {
+  font-size: 1.8rem; /* Bigger for readability */
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* 📌 PRODUCT SUBTITLE */
+.flat-top-subtitle {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+/* 📌 BUTTONS */
+.toja-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.check-price-btn {
+  background-color: #334766;
+  color: #FFF;
+  font-size: 1.2rem;
+  padding: 12px;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.check-price-btn:hover {
+  background-color: #161f2c;
+}
+
+/* 📌 FEATURE LIST */
+.toja-pros {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.toja-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.toja__feature {
+  font-size: 1.3rem; /* Bigger bullet points */
+}
+
+/* 📌 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  /* Adjust video title positioning */
+  .flex-title-container {
+    margin-top: -10rem;
+  }
+
+  .video-title {
+    font-size: 2rem;
+  }
+
+  .video-subtitle {
+    font-size: 1.2rem;
+  }
+
+  /* Stack elements properly */
+  .box5 {
+    padding: 1rem;
+  }
+
+  /* Adjust image sizes */
+  .flat-top-image {
+    max-width: 100%;
+  }
+
+  /* Adjust button size */
+  .check-price-btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Adjust feature list */
+  .toja__feature {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Center everything */
+  .video-title {
+    font-size: 1.8rem;
+  }
+
+  .video-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Adjust font sizes */
+  .flat-top-title {
+    font-size: 1.6rem;
+  }
+
+  .flat-top-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .toja__feature {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+/* my code
 #background-video {
   width: 100vw;
   height: 75vh;
   object-fit: cover;
-  /*position: fixed;*/
+  /*position: fixed;
   left: 1rem;
   right: 0;
   top: 10rem;
@@ -84,10 +310,10 @@
   grid-template-columns: 25% 75%;
   padding: 0 1rem; /* Adds spacing on small screens */
   /*grid-template-columns: 20% 39% 39%;      1/29test*/ 
-  /*grid-template-rows: 4rem 3rem 32rem 29rem 36rem 32rem 32rem 25rem 3rem 3rem 22rem 22rem;*/
+  /*grid-template-rows: 4rem 3rem 32rem 29rem 36rem 32rem 32rem 25rem 3rem 3rem 22rem 22rem;
   margin-top:18rem;
   /*grid-column-gap: 20px;
-  grid-row-gap: 3rem;   1/29 test*/
+  grid-row-gap: 3rem;   1/29 test
 }
 
 .box1 {
@@ -165,7 +391,7 @@ a:visited {
 
 
 
-/* Product Details Box Styling */
+/* Product Details Box Styling 
 .box5 {
     background-color: #F5F5F5;
     padding: 1rem;
@@ -174,12 +400,12 @@ a:visited {
     height: fit-content;
     color: #27374D;
     font-size: 1.2rem;
-    text-align: center; /* Centers text and image */
+    text-align: center; /* Centers text and image 
     grid-column-start: 2;
     grid-column-end: 4;
   }
   
-  /* Image Styling Inside the Text Box */
+  /* Image Styling Inside the Text Box 
   .flat-top-image-container {
     width: 100%;
     display: flex;
@@ -188,7 +414,7 @@ a:visited {
   }
   
   .flat-top-image {
-    width: 90%; /* Adjusts image width inside the text box */
+    width: 90%; /* Adjusts image width inside the text box 
     max-width: 400px;
     height: auto;
     border-radius: 4px;
@@ -215,7 +441,7 @@ a:visited {
     margin-top: 2rem;
   }
   
-  /* Buttons Responsive Design */
+  /* Buttons Responsive Design 
   .check-price-btn {
     background-color: #334766;
     color: #FFF;
@@ -225,7 +451,7 @@ a:visited {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Full-width for mobile */
+    width: 100%; /* Full-width for mobile 
     max-width: 250px;
     text-align: center;
   }
@@ -235,7 +461,7 @@ a:visited {
   }
 
   
-  /* Make layout responsive for smaller screens */
+  /* Make layout responsive for smaller screens 
   @media (max-width: 768px) {
     .wrapper {
       width:max-content;
@@ -251,8 +477,8 @@ a:visited {
     }
   
     .flat-top-image {
-      width: 100%; /* Makes image responsive for mobile */
-      max-width: 300px; /* Adjusts size for smaller screens */
+      width: 100%; /* Makes image responsive for mobile 
+      max-width: 300px; /*Adjusts size for smaller screens 
     }
   
     .toja-price {
