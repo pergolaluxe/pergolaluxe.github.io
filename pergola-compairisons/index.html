@@ -129,6 +129,21 @@
     <option value="Brand B">Brand B</option>
     <option value="Brand C">Brand C</option>
   </select>
+
+
+  <label for="minPrice">Min Price:</label>
+  <input type="number" id="minPrice" placeholder="Min" min="0">
+
+  <label for="maxPrice">Max Price:</label>
+  <input type="number" id="maxPrice" placeholder="Max" min="0">
+
+  <label for="minSize">Min Size:</label>
+  <input type="number" id="minSize" placeholder="Min Size">
+
+  <label for="maxSize">Max Size:</label>
+  <input type="number" id="maxSize" placeholder="Max Size">
+
+  <button onclick="filterTable()">Apply Filters</button>
 </div>
 
 <table id="comparisonTable">
