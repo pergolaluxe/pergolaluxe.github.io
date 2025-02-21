@@ -156,6 +156,7 @@
       <td>Toja Grid</td>
       <td>Pergola Kit with Shade SAIL</td>
       <td>$736 </td>
+      <td></td>
       <td>Powder Coated Steal Brackets</td>
       <td>Customizable - Up to 12'</td>
       <td>5</td>
@@ -174,6 +175,7 @@
       <td>Toja Grid</td>
       <td>Model Y</td>
       <td>$950</td>
+      <td></td>
       <td>Metal</td>
       <td>3</td>
     </tr>
@@ -181,6 +183,7 @@
       <td>Brand C</td>
       <td>Model Z</td>
       <td>$1100</td>
+      <td></td>
       <td>Aluminum</td>
       <td>4</td>
     </tr>
@@ -188,20 +191,16 @@
       <td>Brand A</td>
       <td>Model Q</td>
       <td>$1400</td>
+      <td></td>
       <td>Composite</td>
       <td>10</td>
     </tr>
-
-
-
-
-
-
 
     <tr data-brand="Brand B">
       <td>Brand B</td>
       <td>Model Y</td>
       <td>$950</td>
+      <td></td>
       <td>Metal</td>
       <td>3</td>
     </tr>
@@ -209,6 +208,7 @@
       <td>Brand C</td>
       <td>Model Z</td>
       <td>$1100</td>
+      <td></td>
       <td>Aluminum</td>
       <td>4</td>
     </tr>
@@ -216,6 +216,7 @@
       <td>Brand A</td>
       <td>Model Q</td>
       <td>$1400</td>
+      <td></td>
       <td>Composite</td>
       <td>10</td>
     </tr>
@@ -224,33 +225,46 @@
 
 <script>
   // Filter Functionality
-  document.getElementById('brandFilter').addEventListener('change', function () {
-    const filter = this.value.toLowerCase();
-    const rows = document.querySelectorAll('#comparisonTable tbody tr');
+  function filterTable() {
+    const brandFilter = document.getElementById("brandFilter").value;
+    const minPrice = document.getElementById("minPrice").value;
+    const maxPrice = document.getElementById("maxPrice").value;
+    const minSize = document.getElementById("minSize").value;
+    const maxSize = document.getElementById("maxSize").value;
+
+    const rows = document.querySelectorAll("#comparisonTable tbody tr");
 
     rows.forEach(row => {
-      const brand = row.getAttribute('data-brand').toLowerCase();
-      row.style.display = (filter === 'all' || brand === filter) ? '' : 'none';
+        const brand = row.dataset.brand;
+        const price = parseFloat(row.cells[2].textContent.replace("$", "").trim());
+        const size = parseFloat(row.cells[4].textContent.trim());
+
+        let brandMatch = (brandFilter === "all") || (brand === brandFilter);
+        let priceMatch = (!minPrice || price >= minPrice) && (!maxPrice || price <= maxPrice);
+        let sizeMatch = (!minSize || size >= minSize) && (!maxSize || size <= maxSize);
+
+        row.style.display = (brandMatch && priceMatch && sizeMatch) ? "" : "none";
     });
-  });
+}
 
-  // Sort Table Functionality
-  function sortTable(columnIndex) {
-    const table = document.getElementById('comparisonTable');
-    const rows = Array.from(table.rows).slice(1); // Exclude header row
-    const isNumeric = !isNaN(rows[0].cells[columnIndex].innerText);
-
-    rows.sort((a, b) => {
-      const cellA = a.cells[columnIndex].innerText.toLowerCase();
-      const cellB = b.cells[columnIndex].innerText.toLowerCase();
-      
-      return isNumeric
-        ? parseFloat(cellA) - parseFloat(cellB)
-        : cellA.localeCompare(cellB);
+// Sort Table Function
+function sortTable(colIndex) {
+    const table = document.getElementById("comparisonTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    
+    const sortedRows = rows.sort((a, b) => {
+        const aText = a.cells[colIndex].textContent.trim();
+        const bText = b.cells[colIndex].textContent.trim();
+        
+        return isNaN(aText) || isNaN(bText) 
+            ? aText.localeCompare(bText) 
+            : parseFloat(aText) - parseFloat(bText);
     });
 
-    rows.forEach(row => table.appendChild(row)); // Reorder rows in the table
-  }
+    tbody.innerHTML = "";
+    sortedRows.forEach(row => tbody.appendChild(row));
+}
 </script>
 
 </body>
