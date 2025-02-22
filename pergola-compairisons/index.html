@@ -78,7 +78,7 @@
 
 
   <style>
-              body {
+       body {
             font-family: Arial, sans-serif;
             padding: 15px;
             background-color: #f8f9fa;
@@ -105,7 +105,7 @@
             width: 100%;
         }
 
-        /* DEFAULT TABLE */
+        /* DEFAULT TABLE (Hidden on Mobile) */
         .table-container {
             display: block;
         }
@@ -127,7 +127,7 @@
             color: white;
         }
 
-        /* MOBILE: SHOW CARDS */
+        /* MOBILE: SHOW ONLY CARDS, HIDE TABLE */
         @media (max-width: 768px) {
             .table-container {
                 display: none; /* Hide table */
@@ -138,23 +138,31 @@
                 flex-direction: column;
                 gap: 15px;
             }
+        }
 
-            .card {
-                background: white;
-                border: 1px solid #ddd;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* DESKTOP: SHOW ONLY TABLE, HIDE CARDS */
+        @media (min-width: 769px) {
+            .card-container {
+                display: none; /* Hide cards */
             }
+        }
 
-            .card h3 {
-                margin: 0 0 10px;
-                color: #007bff;
-            }
+        /* CARD DESIGN */
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-            .card p {
-                margin: 5px 0;
-            }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #007bff;
+        }
+
+        .card p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -183,7 +191,7 @@
     <input type="number" id="maxSize" placeholder="Max Size" oninput="filterTable()">
 </div>
 
-<!-- TABLE FOR DESKTOP -->
+<!-- TABLE (For Large Screens) -->
 <div class="table-container">
     <table id="comparisonTable">
         <thead>
@@ -250,7 +258,7 @@
     </table>
 </div>
 
-<!-- CARD VIEW (For Mobile) -->
+<!-- CARDS (For Mobile) -->
 <div class="card-container" id="cardContainer"></div>
 
 <script>
@@ -261,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function generateCards() {
     const rows = document.querySelectorAll("#comparisonTable tbody tr");
     const cardContainer = document.getElementById("cardContainer");
-    
+
     cardContainer.innerHTML = ""; // Clear previous cards
 
     rows.forEach(row => {
@@ -282,50 +290,10 @@ function generateCards() {
         cardContainer.appendChild(card);
     });
 }
-
-function filterTable() {
-    const brandFilter = document.getElementById("brandFilter").value;
-    const minPrice = document.getElementById("minPrice").value;
-    const maxPrice = document.getElementById("maxPrice").value;
-    const minSize = document.getElementById("minSize").value;
-    const maxSize = document.getElementById("maxSize").value;
-
-    const rows = document.querySelectorAll("#comparisonTable tbody tr");
-    const cardContainer = document.getElementById("cardContainer");
-    
-    cardContainer.innerHTML = ""; // Clear previous cards
-
-    rows.forEach(row => {
-        const brand = row.dataset.brand;
-        const price = parseFloat(row.cells[2].textContent.replace("$", "").trim());
-        const size = parseFloat(row.cells[4].textContent.trim());
-
-        let brandMatch = (brandFilter === "all") || (brand === brandFilter);
-        let priceMatch = (!minPrice || price >= minPrice) && (!maxPrice || price <= maxPrice);
-        let sizeMatch = (!minSize || size >= minSize) && (!maxSize || size <= maxSize);
-
-        if (brandMatch && priceMatch && sizeMatch) {
-            row.style.display = ""; // Show in table
-
-            let card = document.createElement("div");
-            card.classList.add("card");
-            card.innerHTML = `
-                <h3>${row.cells[0].textContent} - ${row.cells[1].textContent}</h3>
-                <p><strong>Price:</strong> $${row.cells[2].textContent}</p>
-                <p><strong>Material:</strong> ${row.cells[3].textContent}</p>
-                <p><strong>Size:</strong> ${row.cells[4].textContent} ft</p>
-            `;
-            cardContainer.appendChild(card);
-        } else {
-            row.style.display = "none"; // Hide table row
-        }
-    });
-}
 </script>
 
 </body>
 </html>
-       
 
 
 
