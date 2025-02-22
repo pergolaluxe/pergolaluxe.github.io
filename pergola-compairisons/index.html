@@ -78,7 +78,7 @@
 
 
   <style>
-        body {
+              body {
             font-family: Arial, sans-serif;
             padding: 15px;
             background-color: #f8f9fa;
@@ -105,7 +105,7 @@
             width: 100%;
         }
 
-        /* DEFAULT TABLE FOR LARGER SCREENS */
+        /* DEFAULT TABLE */
         .table-container {
             display: block;
         }
@@ -127,10 +127,10 @@
             color: white;
         }
 
-        /* MOBILE VIEW - HIDE TABLE & USE CARDS */
+        /* MOBILE: SHOW CARDS */
         @media (max-width: 768px) {
             .table-container {
-                display: none;
+                display: none; /* Hide table */
             }
 
             .card-container {
@@ -183,27 +183,27 @@
     <input type="number" id="maxSize" placeholder="Max Size" oninput="filterTable()">
 </div>
 
-<!-- TABLE VIEW (Larger Screens) -->
+<!-- TABLE FOR DESKTOP -->
 <div class="table-container">
     <table id="comparisonTable">
         <thead>
-            <tr>
-              <th onclick="sortTable(0)">Brand</th>
-              <th onclick="sortTable(1)">Model</th>
-              <th onclick="sortTable(2)">Price</th>
-              <th onclick="sortTable(3)">Image</th>
-              <th onclick="sortTable(4)">Material</th>
-              <th onclick="sortTable(5)">Size</th>
-              <th onclick="sortTable(6)">Warranty (Years)</th>
-              <th onclick="sortTable(7)">Lumber Included</th>
-              <th onclick="sortTable(8)">Must Assemble</th>
-              <th onclick="sortTable(9)">Wind Resistance</th>
-              <th onclick="sortTable(10)">Snow Load</th>
-              <th onclick="sortTable(11)">Features</th>
-              <th onclick="sortTable(12)">Rating</th>
-              <th onclick="sortTable(13)"># of Reviews</th>
-              <th onclick="sortTable(14)">Where to Buy</th>
-            </tr>
+          <tr>
+            <th onclick="sortTable(0)">Brand</th>
+            <th onclick="sortTable(1)">Model</th>
+            <th onclick="sortTable(2)">Price</th>
+            <th onclick="sortTable(3)">Image</th>
+            <th onclick="sortTable(4)">Material</th>
+            <th onclick="sortTable(5)">Size</th>
+            <th onclick="sortTable(6)">Warranty (Years)</th>
+            <th onclick="sortTable(7)">Lumber Included</th>
+            <th onclick="sortTable(8)">Must Assemble</th>
+            <th onclick="sortTable(9)">Wind Resistance</th>
+            <th onclick="sortTable(10)">Snow Load</th>
+            <th onclick="sortTable(11)">Features</th>
+            <th onclick="sortTable(12)">Rating</th>
+            <th onclick="sortTable(13)"># of Reviews</th>
+            <th onclick="sortTable(14)">Where to Buy</th>
+          </tr>
         </thead>
         <tbody>
           <tr data-brand="Brand A">
@@ -250,10 +250,39 @@
     </table>
 </div>
 
-<!-- CARD VIEW (Mobile Screens) -->
+<!-- CARD VIEW (For Mobile) -->
 <div class="card-container" id="cardContainer"></div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    generateCards(); // Generate cards on page load
+});
+
+function generateCards() {
+    const rows = document.querySelectorAll("#comparisonTable tbody tr");
+    const cardContainer = document.getElementById("cardContainer");
+    
+    cardContainer.innerHTML = ""; // Clear previous cards
+
+    rows.forEach(row => {
+        const brand = row.cells[0].textContent.trim();
+        const model = row.cells[1].textContent.trim();
+        const price = row.cells[2].textContent.trim();
+        const material = row.cells[3].textContent.trim();
+        const size = row.cells[4].textContent.trim();
+
+        let card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <h3>${brand} - ${model}</h3>
+            <p><strong>Price:</strong> $${price}</p>
+            <p><strong>Material:</strong> ${material}</p>
+            <p><strong>Size:</strong> ${size} ft</p>
+        `;
+        cardContainer.appendChild(card);
+    });
+}
+
 function filterTable() {
     const brandFilter = document.getElementById("brandFilter").value;
     const minPrice = document.getElementById("minPrice").value;
@@ -276,9 +305,8 @@ function filterTable() {
         let sizeMatch = (!minSize || size >= minSize) && (!maxSize || size <= maxSize);
 
         if (brandMatch && priceMatch && sizeMatch) {
-            row.style.display = "";
-            
-            // Create a Card for Mobile View
+            row.style.display = ""; // Show in table
+
             let card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
@@ -289,34 +317,14 @@ function filterTable() {
             `;
             cardContainer.appendChild(card);
         } else {
-            row.style.display = "none";
+            row.style.display = "none"; // Hide table row
         }
     });
-}
-
-// Sort Table Function
-function sortTable(colIndex) {
-    const table = document.getElementById("comparisonTable");
-    const tbody = table.querySelector("tbody");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    
-    const sortedRows = rows.sort((a, b) => {
-        const aText = a.cells[colIndex].textContent.trim();
-        const bText = b.cells[colIndex].textContent.trim();
-        
-        return isNaN(aText) || isNaN(bText) 
-            ? aText.localeCompare(bText) 
-            : parseFloat(aText) - parseFloat(bText);
-    });
-
-    tbody.innerHTML = "";
-    sortedRows.forEach(row => tbody.appendChild(row));
 }
 </script>
 
 </body>
 </html>
-  
        
 
 
