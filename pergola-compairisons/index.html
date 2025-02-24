@@ -125,6 +125,21 @@ th {
     color: white;
 }
 
+.filter-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-container button:hover {
+    background-color: #0056b3;
+}
+
+
 /* MOBILE: SHOW ONLY CARDS, HIDE TABLE */
 @media (max-width: 768px) {
     .table-container {
@@ -177,16 +192,19 @@ th {
 </select>
 
 <label for="minPrice">Min Price:</label>
-<input type="number" id="minPrice" placeholder="Min" min="0" oninput="filterTable()">
+<input type="number" id="minPrice" placeholder="Min" min="0">
 
 <label for="maxPrice">Max Price:</label>
-<input type="number" id="maxPrice" placeholder="Max" min="0" oninput="filterTable()">
+<input type="number" id="maxPrice" placeholder="Max" min="0">
 
 <label for="minSize">Min Size:</label>
-<input type="number" id="minSize" placeholder="Min Size" oninput="filterTable()">
+<input type="number" id="minSize" placeholder="Min Size">
 
 <label for="maxSize">Max Size:</label>
-<input type="number" id="maxSize" placeholder="Max Size" oninput="filterTable()">
+<input type="number" id="maxSize" placeholder="Max Size">
+
+<button onclick="filterTable()">Apply Price & Size Filters</button>
+
 </div>
 
 <!-- TABLE (For Large Screens) -->
