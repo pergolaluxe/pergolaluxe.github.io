@@ -111,6 +111,7 @@
         border-radius: 5px;
         font-size: 16px;
         cursor: pointer;
+        width: 100%;
     }
 
     .filter-container button:hover {
@@ -204,6 +205,7 @@
 <input type="number" id="maxSize" placeholder="Max Size">
 
 <button onclick="filterTable()">Apply Price & Size Filters</button>
+<button onclick="resetFilters()" style="background-color: #dc3545;">Reset Filters</button>
 </div>
 
 <!-- TABLE (For Large Screens) -->
@@ -262,7 +264,7 @@
             <td>Aluminum</td>
             <td>4</td>
         </tr>
-        <tr data-brand="Brand B">
+        <tr data-brand="Brand A">
             <td>Toja Grid</td>
             <td>Model Q</td>
             <td>1400</td>
@@ -278,7 +280,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-generateCards(); // Generate cards on page load
+generateCards();
 });
 
 function generateCards() {
@@ -313,36 +315,29 @@ const maxPrice = parseFloat(document.getElementById("maxPrice").value) || Infini
 const minSize = parseFloat(document.getElementById("minSize").value) || 0;
 const maxSize = parseFloat(document.getElementById("maxSize").value) || Infinity;
 
-const rows = document.querySelectorAll("#comparisonTable tbody tr");
-
-rows.forEach(row => {
+document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
     const brand = row.dataset.brand;
     const price = parseFloat(row.cells[2].textContent.trim());
     const size = parseFloat(row.cells[4].textContent.trim());
 
-    let brandMatch = (brandFilter === "all") || (brand === brandFilter);
-    let priceMatch = (price >= minPrice && price <= maxPrice);
-    let sizeMatch = (size >= minSize && size <= maxSize);
-
-    row.style.display = (brandMatch && priceMatch && sizeMatch) ? "" : "none";
+    row.style.display = (brandFilter === "all" || brand === brandFilter) &&
+                        (price >= minPrice && price <= maxPrice) &&
+                        (size >= minSize && size <= maxSize) ? "" : "none";
 });
 }
 
-function sortTable(colIndex) {
-const table = document.getElementById("comparisonTable");
-const tbody = table.querySelector("tbody");
-const rows = Array.from(tbody.querySelectorAll("tr"));
-
-rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
-
-tbody.innerHTML = "";
-rows.forEach(row => tbody.appendChild(row));
+function resetFilters() {
+document.getElementById("brandFilter").value = "all";
+document.getElementById("minPrice").value = "";
+document.getElementById("maxPrice").value = "";
+document.getElementById("minSize").value = "";
+document.getElementById("maxSize").value = "";
+filterTable();
 }
 </script>
 
 </body>
 </html>
-
 
  <!--
 
