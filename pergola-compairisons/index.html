@@ -276,20 +276,74 @@ reapplySorting();
 window.addEventListener("resize", checkScreenSize);
 
 function checkScreenSize() {
-const tableContainer = document.getElementById("tableContainer");
-const cardContainer = document.getElementById("cardContainer");
+    const tableContainer = document.getElementById("tableContainer");
+    const cardContainer = document.getElementById("cardContainer");
 
-if (window.innerWidth <= 768) {
-    tableContainer.remove(); // Completely remove the table in mobile
-    cardContainer.style.display = "flex";
-} else {
-    if (!document.getElementById("tableContainer")) {
-        document.body.insertAdjacentHTML('beforeend', `<div class="table-container" id="tableContainer">${document.getElementById("comparisonTable").outerHTML}</div>`);
-        reapplySorting(); // Reapply sorting when recreating table
+    if (window.innerWidth <= 768) {
+        if (tableContainer) {
+            tableContainer.remove(); // Fully remove the table on mobile
+        }
+        cardContainer.style.display = "flex"; // Show cards on mobile
+    } else {
+        if (!document.getElementById("tableContainer")) {
+            // Recreate the table if it was removed
+            const newTableContainer = document.createElement("div");
+            newTableContainer.className = "table-container";
+            newTableContainer.id = "tableContainer";
+            newTableContainer.innerHTML = `
+                <table id="comparisonTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Brand</th>
+                            <th onclick="sortTable(1)">Model</th>
+                            <th onclick="sortTable(2)">Price ($)</th>
+                            <th onclick="sortTable(3)">Material</th>
+                            <th onclick="sortTable(4)">Size (ft)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr data-brand="Brand A">
+                            <td>Toja Grid</td>
+                            <td>Pergola Kit</td>
+                            <td>736</td>
+                            <td>Steel</td>
+                            <td>12</td>
+                        </tr>
+                        <tr data-brand="Brand A">
+                            <td>Toja Grid</td>
+                            <td>Model Y</td>
+                            <td>950</td>
+                            <td>Metal</td>
+                            <td>3</td>
+                        </tr>
+                        <tr data-brand="Brand C">
+                            <td>Brand C</td>
+                            <td>Model Z</td>
+                            <td>1100</td>
+                            <td>Aluminum</td>
+                            <td>4</td>
+                        </tr>
+                        <tr data-brand="Brand A">
+                            <td>Toja Grid</td>
+                            <td>Model Q</td>
+                            <td>1400</td>
+                            <td>Composite</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `;
+            document.body.appendChild(newTableContainer); // Add the table back to the page
+            reapplySorting(); // Restore sorting functionality
+        }
+        cardContainer.style.display = "none"; // Hide cards on larger screens
     }
-    cardContainer.style.display = "none";
 }
-}
+
+// Ensure it runs on page load & when resizing
+document.addEventListener("DOMContentLoaded", checkScreenSize);
+window.addEventListener("resize", checkScreenSize);
+
 
 function generateCards() {
 const rows = document.querySelectorAll("#comparisonTable tbody tr");
