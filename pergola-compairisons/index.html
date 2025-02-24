@@ -75,8 +75,7 @@
     </nav>
 </header>
 <main>
-
-
+<style>
   body {
     font-family: Arial, sans-serif;
     padding: 15px;
@@ -104,21 +103,7 @@
     width: 100%;
 }
 
-.filter-container button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.filter-container button:hover {
-    background-color: #0056b3;
-}
-
-/* TABLE (Hidden on Mobile) */
+/* DEFAULT TABLE (Hidden on Mobile) */
 .table-container {
     display: block;
 }
@@ -192,18 +177,16 @@ th {
 </select>
 
 <label for="minPrice">Min Price:</label>
-<input type="number" id="minPrice" placeholder="Min" min="0">
+<input type="number" id="minPrice" placeholder="Min" min="0" oninput="filterTable()">
 
 <label for="maxPrice">Max Price:</label>
-<input type="number" id="maxPrice" placeholder="Max" min="0">
+<input type="number" id="maxPrice" placeholder="Max" min="0" oninput="filterTable()">
 
 <label for="minSize">Min Size:</label>
-<input type="number" id="minSize" placeholder="Min Size">
+<input type="number" id="minSize" placeholder="Min Size" oninput="filterTable()">
 
 <label for="maxSize">Max Size:</label>
-<input type="number" id="maxSize" placeholder="Max Size">
-
-<button onclick="filterTable()">Apply Price & Size Filters</button>
+<input type="number" id="maxSize" placeholder="Max Size" oninput="filterTable()">
 </div>
 
 <!-- TABLE (For Large Screens) -->
@@ -278,7 +261,7 @@ th {
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-generateCards(); // Generate cards when the page loads
+generateCards(); // Generate cards on page load
 });
 
 function generateCards() {
@@ -303,43 +286,6 @@ card.innerHTML = `
     <p><strong>Size:</strong> ${size} ft</p>
 `;
 cardContainer.appendChild(card);
-});
-}
-
-function filterTable() {
-const brandFilter = document.getElementById("brandFilter").value;
-const minPrice = document.getElementById("minPrice").value;
-const maxPrice = document.getElementById("maxPrice").value;
-const minSize = document.getElementById("minSize").value;
-const maxSize = document.getElementById("maxSize").value;
-
-const rows = document.querySelectorAll("#comparisonTable tbody tr");
-const cardContainer = document.getElementById("cardContainer");
-
-cardContainer.innerHTML = ""; // Clear previous cards
-
-rows.forEach(row => {
-const brand = row.dataset.brand;
-const price = parseFloat(row.cells[2].textContent.replace("$", "").trim());
-const size = parseFloat(row.cells[4].textContent.trim());
-
-let brandMatch = (brandFilter === "all") || (brand === brandFilter);
-let priceMatch = (!minPrice || price >= minPrice) && (!maxPrice || price <= maxPrice);
-let sizeMatch = (!minSize || size >= minSize) && (!maxSize || size <= maxSize);
-
-if (brandMatch && priceMatch && sizeMatch) {
-    row.style.display = ""; // Show table row
-    
-    let card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-        <h3>${row.cells[0].textContent} - ${row.cells[1].textContent}</h3>
-        <p><strong>Price:</strong> $${row.cells[2].textContent}</p>
-        <p><strong>Material:</strong> ${row.cells[3].textContent}</p>
-        <p><strong>Size:</strong> ${row.cells[4].textContent} ft</p>
-    `;
-    cardContainer.appendChild(card);
-}
 });
 }
 </script>
