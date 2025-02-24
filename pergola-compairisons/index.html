@@ -94,8 +94,7 @@
         font-weight: bold;
     }
 
-    .filter-container select,
-    .filter-container input {
+    .filter-container select {
         padding: 8px;
         font-size: 16px;
         border: 1px solid #ccc;
@@ -192,19 +191,6 @@
     <option value="Brand C">Brand C</option>
 </select>
 
-<label for="minPrice">Min Price:</label>
-<input type="number" id="minPrice" placeholder="Min" min="0">
-
-<label for="maxPrice">Max Price:</label>
-<input type="number" id="maxPrice" placeholder="Max" min="0">
-
-<label for="minSize">Min Size:</label>
-<input type="number" id="minSize" placeholder="Min Size">
-
-<label for="maxSize">Max Size:</label>
-<input type="number" id="maxSize" placeholder="Max Size">
-
-<button onclick="filterTable()">Apply Price & Size Filters</button>
 <button onclick="resetFilters()" style="background-color: #dc3545;">Reset Filters</button>
 </div>
 
@@ -234,7 +220,7 @@
       <tr data-brand="Brand A">
         <td>Toja Grid</td>
         <td>Pergola Kit with Shade SAIL</td>
-        <td>736 </td>
+        <td>$736 </td>
         <td></td>
         <td>Powder Coated Steal Brackets</td>
         <td>Customizable - Up to 12'</td>
@@ -279,8 +265,9 @@
 <div class="card-container" id="cardContainer"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 generateCards();
+reapplySorting();
 });
 
 function generateCards() {
@@ -310,39 +297,41 @@ rows.forEach(row => {
 
 function filterTable() {
 const brandFilter = document.getElementById("brandFilter").value;
-const minPrice = parseFloat(document.getElementById("minPrice").value) || 0;
-const maxPrice = parseFloat(document.getElementById("maxPrice").value) || Infinity;
-const minSize = parseFloat(document.getElementById("minSize").value) || 0;
-const maxSize = parseFloat(document.getElementById("maxSize").value) || Infinity;
 
 document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
     const brand = row.dataset.brand;
-    const price = parseFloat(row.cells[2].textContent.trim());
-    const size = parseFloat(row.cells[4].textContent.trim());
-
-    row.style.display = (brandFilter === "all" || brand === brandFilter) &&
-                        (price >= minPrice && price <= maxPrice) &&
-                        (size >= minSize && size <= maxSize) ? "" : "none";
+    row.style.display = (brandFilter === "all" || brand === brandFilter) ? "" : "none";
 });
 }
 
 function resetFilters() {
-    document.getElementById("brandFilter").value = "all";
-    document.getElementById("minPrice").value = "";
-    document.getElementById("maxPrice").value = "";
-    document.getElementById("minSize").value = "";
-    document.getElementById("maxSize").value = "";
+document.getElementById("brandFilter").value = "all";
+document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
+    row.style.display = ""; // Show all rows
+});
 
-    // Show all rows in the table
-    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
-        row.style.display = ""; // Make ALL rows visible
-    });
-
-    // Regenerate cards to show all data
-    generateCards();
+generateCards();  // Ensure all cards reappear
+reapplySorting(); // Ensure sorting still works
 }
 
+function sortTable(colIndex) {
+const table = document.getElementById("comparisonTable");
+const tbody = table.querySelector("tbody");
+const rows = Array.from(tbody.querySelectorAll("tr"));
 
+rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
+
+tbody.innerHTML = "";
+rows.forEach(row => tbody.appendChild(row));
+}
+
+function reapplySorting() {
+document.querySelectorAll("#comparisonTable th").forEach((th, index) => {
+    th.onclick = function () {
+        sortTable(index);
+    };
+});
+}
 </script>
 
 </body>
