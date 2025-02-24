@@ -117,31 +117,7 @@
         background-color: #0056b3;
     }
 
-    /* MOBILE: SHOW CARDS, HIDE TABLE */
-    @media (max-width: 768px) {
-        .table-container {
-            display: none;
-        }
-
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-    }
-
-    /* DESKTOP: SHOW TABLE, HIDE CARDS */
-    @media (min-width: 769px) {
-        .card-container {
-            display: none;
-        }
-    }
-
     /* TABLE */
-    .table-container {
-        display: block;
-    }
-
     table {
         width: 100%;
         border-collapse: collapse;
@@ -161,6 +137,12 @@
     }
 
     /* CARD DESIGN */
+    .card-container {
+        display: none; /* Cards are hidden on large screens */
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .card {
         background: white;
         border: 1px solid #ddd;
@@ -176,6 +158,26 @@
 
     .card p {
         margin: 5px 0;
+    }
+
+    /* MOBILE: REMOVE TABLE, SHOW CARDS */
+    @media (max-width: 768px) {
+        .table-container {
+            display: none !important;
+        }
+        .card-container {
+            display: flex;
+        }
+    }
+
+    /* DESKTOP: REMOVE CARDS, SHOW TABLE */
+    @media (min-width: 769px) {
+        .table-container {
+            display: block;
+        }
+        .card-container {
+            display: none;
+        }
     }
 </style>
 </head>
@@ -195,7 +197,7 @@
 </div>
 
 <!-- TABLE (For Large Screens) -->
-<div class="table-container">
+<div class="table-container" id="tableContainer">
 <table id="comparisonTable">
     <thead>
       <tr>
@@ -216,7 +218,7 @@
         <th onclick="sortTable(14)">Where to Buy</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="tableBody">
       <tr data-brand="Brand A">
         <td>Toja Grid</td>
         <td>Pergola Kit with Shade SAIL</td>
@@ -266,9 +268,28 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+checkScreenSize();
 generateCards();
 reapplySorting();
 });
+
+window.addEventListener("resize", checkScreenSize);
+
+function checkScreenSize() {
+const tableContainer = document.getElementById("tableContainer");
+const cardContainer = document.getElementById("cardContainer");
+
+if (window.innerWidth <= 768) {
+    tableContainer.remove(); // Completely remove the table in mobile
+    cardContainer.style.display = "flex";
+} else {
+    if (!document.getElementById("tableContainer")) {
+        document.body.insertAdjacentHTML('beforeend', `<div class="table-container" id="tableContainer">${document.getElementById("comparisonTable").outerHTML}</div>`);
+        reapplySorting(); // Reapply sorting when recreating table
+    }
+    cardContainer.style.display = "none";
+}
+}
 
 function generateCards() {
 const rows = document.querySelectorAll("#comparisonTable tbody tr");
@@ -307,11 +328,11 @@ document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
 function resetFilters() {
 document.getElementById("brandFilter").value = "all";
 document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
-    row.style.display = ""; // Show all rows
+    row.style.display = "";
 });
 
-generateCards();  // Ensure all cards reappear
-reapplySorting(); // Ensure sorting still works
+generateCards();
+reapplySorting();
 }
 
 function sortTable(colIndex) {
