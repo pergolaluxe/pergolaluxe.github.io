@@ -335,12 +335,13 @@ function resetFilters() {
 
     // Show all rows in the table
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
-        row.style.display = ""; // Make all rows visible
+        row.style.display = ""; // Make ALL rows visible
     });
 
-    // Re-run the filter function to update UI correctly
-    filterTable();
+    // Regenerate cards to show all data
+    generateCards();
 }
+
 
 </script>
 
