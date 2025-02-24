@@ -327,13 +327,21 @@ document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
 }
 
 function resetFilters() {
-document.getElementById("brandFilter").value = "all";
-document.getElementById("minPrice").value = "";
-document.getElementById("maxPrice").value = "";
-document.getElementById("minSize").value = "";
-document.getElementById("maxSize").value = "";
-filterTable();
+    document.getElementById("brandFilter").value = "all";
+    document.getElementById("minPrice").value = "";
+    document.getElementById("maxPrice").value = "";
+    document.getElementById("minSize").value = "";
+    document.getElementById("maxSize").value = "";
+
+    // Show all rows in the table
+    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
+        row.style.display = ""; // Make all rows visible
+    });
+
+    // Re-run the filter function to update UI correctly
+    filterTable();
 }
+
 </script>
 
 </body>
