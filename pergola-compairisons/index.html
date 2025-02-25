@@ -76,8 +76,7 @@
 </header>
 <main>
   <style>
-
-        body {
+     body {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #f8f9fa;
@@ -95,24 +94,38 @@
             font-weight: bold;
         }
 
-        .filter-container select,
-        .filter-container input,
-        .filter-container button {
+        .filter-container select {
             padding: 8px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: 100%;
+            width: 10rem;
         }
 
         .filter-container button {
-            background-color: #007bff;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
             color: white;
             cursor: pointer;
+            width: 100%;
         }
 
-        .filter-container button:hover {
+        .apply-btn {
+            background-color: #007bff;
+        }
+
+        .apply-btn:hover {
             background-color: #0056b3;
+        }
+
+        .reset-btn {
+            background-color: #dc3545;
+        }
+
+        .reset-btn:hover {
+            background-color: #b02a37;
         }
 
         /* TABLE */
@@ -198,20 +211,26 @@
         <option value="Brand C">Brand C</option>
     </select>
 
-    <label for="minPrice">Min Price:</label>
-    <input type="number" id="minPrice" placeholder="Min" min="0">
+    <label for="priceFilter">Price Range:</label>
+    <select id="priceFilter">
+        <option value="all">All Prices</option>
+        <option value="0-500">Under $500</option>
+        <option value="500-1000">$500 - $1000</option>
+        <option value="1000-1500">$1000 - $1500</option>
+        <option value="1500-9999">Above $1500</option>
+    </select>
 
-    <label for="maxPrice">Max Price:</label>
-    <input type="number" id="maxPrice" placeholder="Max" min="0">
+    <label for="sizeFilter">Size Range:</label>
+    <select id="sizeFilter">
+        <option value="all">All Sizes</option>
+        <option value="0-5">Under 5 ft</option>
+        <option value="5-10">5 - 10 ft</option>
+        <option value="10-15">10 - 15 ft</option>
+        <option value="15-9999">Above 15 ft</option>
+    </select>
 
-    <label for="minSize">Min Size:</label>
-    <input type="number" id="minSize" placeholder="Min Size">
-
-    <label for="maxSize">Max Size:</label>
-    <input type="number" id="maxSize" placeholder="Max Size">
-
-    <button onclick="filterTable()">Apply Filters</button>
-    <button onclick="resetFilters()" style="background-color: #dc3545;">Reset Filters</button>
+    <button class="apply-btn" onclick="filterTable()">Apply Filters</button>
+    <button class="reset-btn" onclick="resetFilters()">Reset Filters</button>
 </div>
 
 <!-- TABLE (For Large Screens) -->
@@ -256,20 +275,55 @@
                   <button class="check-price-btn">Amazon Price</button>
               </a></td>
               </tr>
-            <tr data-brand="Brand A">
+              <tr data-brand="Brand A">
                 <td>Toja Grid</td>
                 <td>Model Y</td>
-                <td>950</td>
+                <td>$950</td>
+                <td></td>
                 <td>Metal</td>
                 <td>3</td>
-            </tr>
-            <tr data-brand="Brand C">
+              </tr>
+              <tr data-brand="Brand C">
                 <td>Brand C</td>
                 <td>Model Z</td>
-                <td>1100</td>
+                <td>$1100</td>
+                <td></td>
                 <td>Aluminum</td>
                 <td>4</td>
-            </tr>
+              </tr>
+              <tr data-brand="Brand A">
+                <td>Brand A</td>
+                <td>Model Q</td>
+                <td>$1400</td>
+                <td></td>
+                <td>Composite</td>
+                <td>10</td>
+              </tr>
+          
+              <tr data-brand="Brand B">
+                <td>Brand B</td>
+                <td>Model Y</td>
+                <td>$950</td>
+                <td></td>
+                <td>Metal</td>
+                <td>3</td>
+              </tr>
+              <tr data-brand="Brand C">
+                <td>Brand C</td>
+                <td>Model Z</td>
+                <td>$1100</td>
+                <td></td>
+                <td>Aluminum</td>
+                <td>4</td>
+              </tr>
+              <tr data-brand="Brand A">
+                <td>Brand A</td>
+                <td>Model Q</td>
+                <td>$1400</td>
+                <td></td>
+                <td>Composite</td>
+                <td>10</td>
+              </tr>
         </tbody>
     </table>
 </div>
@@ -310,45 +364,32 @@ function generateCards() {
 
 function filterTable() {
     const brandFilter = document.getElementById("brandFilter").value;
+    const priceFilter = document.getElementById("priceFilter").value.split("-");
+    const sizeFilter = document.getElementById("sizeFilter").value.split("-");
+
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
         const brand = row.dataset.brand;
-        row.style.display = (brandFilter === "all" || brand === brandFilter) ? "" : "none";
+        const price = parseFloat(row.cells[2].textContent);
+        const size = parseFloat(row.cells[4].textContent);
+
+        let brandMatch = brandFilter === "all" || brand === brandFilter;
+        let priceMatch = price >= priceFilter[0] && price <= priceFilter[1];
+        let sizeMatch = size >= sizeFilter[0] && size <= sizeFilter[1];
+
+        row.style.display = (brandMatch && priceMatch && sizeMatch) ? "" : "none";
     });
 }
 
 function resetFilters() {
     document.getElementById("brandFilter").value = "all";
-    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
-        row.style.display = "";
-    });
-
-    generateCards();
-    reapplySorting();
-}
-
-function sortTable(colIndex) {
-    const table = document.getElementById("comparisonTable");
-    const tbody = table.querySelector("tbody");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-
-    rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
-
-    tbody.innerHTML = "";
-    rows.forEach(row => tbody.appendChild(row));
-}
-
-function reapplySorting() {
-    document.querySelectorAll("#comparisonTable th").forEach((th, index) => {
-        th.onclick = function () {
-            sortTable(index);
-        };
-    });
+    document.getElementById("priceFilter").value = "all";
+    document.getElementById("sizeFilter").value = "all";
+    filterTable();
 }
 </script>
 
 </body>
 </html>
-
 
 
 
