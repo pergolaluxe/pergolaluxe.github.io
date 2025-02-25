@@ -76,7 +76,7 @@
 </header>
 <main>
   <style>
-     body {
+      body {
             font-family: Arial, sans-serif;
             margin: 20px;
             background-color: #f8f9fa;
@@ -99,33 +99,7 @@
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: 10rem;
-        }
-
-        .filter-container button {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            cursor: pointer;
             width: 100%;
-        }
-
-        .apply-btn {
-            background-color: #007bff;
-        }
-
-        .apply-btn:hover {
-            background-color: #0056b3;
-        }
-
-        .reset-btn {
-            background-color: #dc3545;
-        }
-
-        .reset-btn:hover {
-            background-color: #b02a37;
         }
 
         /* TABLE */
@@ -204,126 +178,105 @@
 <!-- FILTERS -->
 <div class="filter-container">
     <label for="brandFilter">Brand:</label>
-    <select id="brandFilter">
+    <select id="brandFilter" onchange="filterTable()">
         <option value="all">All Brands</option>
         <option value="Brand A">Toja Grid</option>
         <option value="Brand B">Brand B</option>
         <option value="Brand C">Brand C</option>
     </select>
-
-    <label for="priceFilter">Price Range:</label>
-    <select id="priceFilter">
-        <option value="all">All Prices</option>
-        <option value="0-500">Under $500</option>
-        <option value="500-1000">$500 - $1000</option>
-        <option value="1000-1500">$1000 - $1500</option>
-        <option value="1500-9999">Above $1500</option>
-    </select>
-
-    <label for="sizeFilter">Size Range:</label>
-    <select id="sizeFilter">
-        <option value="all">All Sizes</option>
-        <option value="0-5">Under 5 ft</option>
-        <option value="5-10">5 - 10 ft</option>
-        <option value="10-15">10 - 15 ft</option>
-        <option value="15-9999">Above 15 ft</option>
-    </select>
-
-    <button class="apply-btn" onclick="filterTable()">Apply Filters</button>
-    <button class="reset-btn" onclick="resetFilters()">Reset Filters</button>
 </div>
 
 <!-- TABLE (For Large Screens) -->
 <div class="table-container" id="tableContainer">
     <table id="comparisonTable">
         <thead>
-            <tr>
-                <th onclick="sortTable(0)">Brand</th>
-                <th onclick="sortTable(1)">Model</th>
-                <th onclick="sortTable(2)">Price</th>
-                <th onclick="sortTable(3)">Image</th>
-                <th onclick="sortTable(4)">Material</th>
-                <th onclick="sortTable(5)">Size</th>
-                <th onclick="sortTable(6)">Warranty (Years)</th>
-                <th onclick="sortTable(7)">Lumber Included</th>
-                <th onclick="sortTable(8)">Must Assemble</th>
-                <th onclick="sortTable(9)">Wind Resistance</th>
-                <th onclick="sortTable(10)">Snow Load</th>
-                <th onclick="sortTable(11)">Features</th>
-                <th onclick="sortTable(12)">Rating</th>
-                <th onclick="sortTable(13)"># of Reviews</th>
-                <th onclick="sortTable(14)">Where to Buy</th>
-              </tr>
+          <tr>
+            <th onclick="sortTable(0)">Brand</th>
+            <th onclick="sortTable(1)">Model</th>
+            <th onclick="sortTable(2)">Price</th>
+            <th onclick="sortTable(3)">Image</th>
+            <th onclick="sortTable(4)">Material</th>
+            <th onclick="sortTable(5)">Size</th>
+            <th onclick="sortTable(6)">Warranty (Years)</th>
+            <th onclick="sortTable(7)">Lumber Included</th>
+            <th onclick="sortTable(8)">Must Assemble</th>
+            <th onclick="sortTable(9)">Wind Resistance</th>
+            <th onclick="sortTable(10)">Snow Load</th>
+            <th onclick="sortTable(11)">Features</th>
+            <th onclick="sortTable(12)">Rating</th>
+            <th onclick="sortTable(13)"># of Reviews</th>
+            <th onclick="sortTable(14)">Where to Buy</th>
+          </tr>
         </thead>
         <tbody>
-            <tr data-brand="Brand A">
-                <td>Toja Grid</td>
-                <td>Pergola Kit with Shade SAIL</td>
-                <td>$736 </td>
-                <td></td>
-                <td>Powder Coated Steal Brackets</td>
-                <td>Customizable - Up to 12'</td>
-                <td>5</td>
-                <td>No</td>
-                <td>Yes</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td> <a href="https://amzn.to/3UTEqjf" target="_blank">
-                  <button class="check-price-btn">Amazon Price</button>
-              </a></td>
-              </tr>
-              <tr data-brand="Brand A">
-                <td>Toja Grid</td>
-                <td>Model Y</td>
-                <td>$950</td>
-                <td></td>
-                <td>Metal</td>
-                <td>3</td>
-              </tr>
-              <tr data-brand="Brand C">
-                <td>Brand C</td>
-                <td>Model Z</td>
-                <td>$1100</td>
-                <td></td>
-                <td>Aluminum</td>
-                <td>4</td>
-              </tr>
-              <tr data-brand="Brand A">
-                <td>Brand A</td>
-                <td>Model Q</td>
-                <td>$1400</td>
-                <td></td>
-                <td>Composite</td>
-                <td>10</td>
-              </tr>
-          
-              <tr data-brand="Brand B">
-                <td>Brand B</td>
-                <td>Model Y</td>
-                <td>$950</td>
-                <td></td>
-                <td>Metal</td>
-                <td>3</td>
-              </tr>
-              <tr data-brand="Brand C">
-                <td>Brand C</td>
-                <td>Model Z</td>
-                <td>$1100</td>
-                <td></td>
-                <td>Aluminum</td>
-                <td>4</td>
-              </tr>
-              <tr data-brand="Brand A">
-                <td>Brand A</td>
-                <td>Model Q</td>
-                <td>$1400</td>
-                <td></td>
-                <td>Composite</td>
-                <td>10</td>
-              </tr>
+          <tr data-brand="Brand A">
+            <td>Toja Grid</td>
+            <td>Pergola Kit with Shade SAIL</td>
+            <td>$736 </td>
+            <td></td>
+            <td>Powder Coated Steal Brackets</td>
+            <td>Customizable - Up to 12'</td>
+            <td>5</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td> <a href="https://amzn.to/3UTEqjf" target="_blank">
+              <button class="check-price-btn">Amazon Price</button>
+          </a></td>
+          </tr>
+          <tr data-brand="Brand A">
+            <td>Toja Grid</td>
+            <td>Model Y</td>
+            <td>$950</td>
+            <td></td>
+            <td>Metal</td>
+            <td>3</td>
+          </tr>
+          <tr data-brand="Brand C">
+            <td>Brand C</td>
+            <td>Model Z</td>
+            <td>$1100</td>
+            <td></td>
+            <td>Aluminum</td>
+            <td>4</td>
+          </tr>
+          <tr data-brand="Brand A">
+            <td>Brand A</td>
+            <td>Model Q</td>
+            <td>$1400</td>
+            <td></td>
+            <td>Composite</td>
+            <td>10</td>
+          </tr>
+      
+          <tr data-brand="Brand B">
+            <td>Brand B</td>
+            <td>Model Y</td>
+            <td>$950</td>
+            <td></td>
+            <td>Metal</td>
+            <td>3</td>
+          </tr>
+          <tr data-brand="Brand C">
+            <td>Brand C</td>
+            <td>Model Z</td>
+            <td>$1100</td>
+            <td></td>
+            <td>Aluminum</td>
+            <td>4</td>
+          </tr>
+          <tr data-brand="Brand A">
+            <td>Brand A</td>
+            <td>Model Q</td>
+            <td>$1400</td>
+            <td></td>
+            <td>Composite</td>
+            <td>10</td>
+          </tr>
         </tbody>
     </table>
 </div>
@@ -364,48 +317,37 @@ function generateCards() {
 
 function filterTable() {
     const brandFilter = document.getElementById("brandFilter").value;
-    const priceFilter = document.getElementById("priceFilter").value.split("-");
-    const sizeFilter = document.getElementById("sizeFilter").value.split("-");
-
-    const minPrice = priceFilter[0] === "all" ? 0 : parseFloat(priceFilter[0]);
-    const maxPrice = priceFilter[1] === "all" ? Infinity : parseFloat(priceFilter[1]);
-    const minSize = sizeFilter[0] === "all" ? 0 : parseFloat(sizeFilter[0]);
-    const maxSize = sizeFilter[1] === "all" ? Infinity : parseFloat(sizeFilter[1]);
 
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
         const brand = row.dataset.brand;
-        const price = parseFloat(row.cells[2]?.textContent) || 0; // Handle empty or missing price
-        const size = parseFloat(row.cells[4]?.textContent) || 0; // Handle empty or missing size
-
-        let brandMatch = (brandFilter === "all" || brand === brandFilter);
-        let priceMatch = (price >= minPrice && price <= maxPrice);
-        let sizeMatch = (size >= minSize && size <= maxSize);
-
-        row.style.display = (brandMatch && priceMatch && sizeMatch) ? "" : "none";
+        row.style.display = (brandFilter === "all" || brand === brandFilter) ? "" : "none";
     });
 
     generateCards(); // Update mobile view
 }
 
+function sortTable(colIndex) {
+    const table = document.getElementById("comparisonTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
 
+    rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
 
-function resetFilters() {
-    document.getElementById("brandFilter").value = "all";
-    document.getElementById("priceFilter").value = "all";
-    document.getElementById("sizeFilter").value = "all";
-
-    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
-        row.style.display = ""; // Show all rows
-    });
-
-    generateCards(); // Ensure cards update
+    tbody.innerHTML = "";
+    rows.forEach(row => tbody.appendChild(row));
 }
 
+function reapplySorting() {
+    document.querySelectorAll("#comparisonTable th").forEach((th, index) => {
+        th.onclick = function () {
+            sortTable(index);
+        };
+    });
+}
 </script>
 
 </body>
 </html>
-
 
 
 
