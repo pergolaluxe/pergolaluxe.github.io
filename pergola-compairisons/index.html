@@ -367,25 +367,40 @@ function filterTable() {
     const priceFilter = document.getElementById("priceFilter").value.split("-");
     const sizeFilter = document.getElementById("sizeFilter").value.split("-");
 
+    // Convert dropdown values to numbers
+    const minPrice = priceFilter[0] === "all" ? 0 : parseFloat(priceFilter[0]);
+    const maxPrice = priceFilter[1] === "all" ? Infinity : parseFloat(priceFilter[1]);
+    const minSize = sizeFilter[0] === "all" ? 0 : parseFloat(sizeFilter[0]);
+    const maxSize = sizeFilter[1] === "all" ? Infinity : parseFloat(sizeFilter[1]);
+
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
         const brand = row.dataset.brand;
         const price = parseFloat(row.cells[2].textContent);
         const size = parseFloat(row.cells[4].textContent);
 
-        let brandMatch = brandFilter === "all" || brand === brandFilter;
-        let priceMatch = price >= priceFilter[0] && price <= priceFilter[1];
-        let sizeMatch = size >= sizeFilter[0] && size <= sizeFilter[1];
+        let brandMatch = (brandFilter === "all" || brand === brandFilter);
+        let priceMatch = (price >= minPrice && price <= maxPrice);
+        let sizeMatch = (size >= minSize && size <= maxSize);
 
         row.style.display = (brandMatch && priceMatch && sizeMatch) ? "" : "none";
     });
+
+    generateCards(); // Update mobile view
 }
+
 
 function resetFilters() {
     document.getElementById("brandFilter").value = "all";
     document.getElementById("priceFilter").value = "all";
     document.getElementById("sizeFilter").value = "all";
-    filterTable();
+
+    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
+        row.style.display = ""; // Show all rows
+    });
+
+    generateCards(); // Ensure cards update
 }
+
 </script>
 
 </body>
