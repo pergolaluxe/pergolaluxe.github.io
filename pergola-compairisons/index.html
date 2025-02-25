@@ -186,6 +186,20 @@
     </select>
 </div>
 
+<!-- SORTING FOR CARDS -->
+<div class="filter-container card-sort-container">
+  <label for="cardSort">Sort Cards By:</label>
+  <select id="cardSort" onchange="sortCards()">
+      <option value="brand">Brand (A-Z)</option>
+      <option value="model">Model (A-Z)</option>
+      <option value="price-low">Price (Low to High)</option>
+      <option value="price-high">Price (High to Low)</option>
+      <option value="size-low">Size (Small to Large)</option>
+      <option value="size-high">Size (Large to Small)</option>
+  </select>
+</div>
+
+
 <!-- TABLE (For Large Screens) -->
 <div class="table-container" id="tableContainer">
     <table id="comparisonTable">
@@ -344,6 +358,56 @@ function reapplySorting() {
         };
     });
 }
+
+function sortCards() {
+    const sortBy = document.getElementById("cardSort").value;
+    const cardContainer = document.getElementById("cardContainer");
+    let cards = Array.from(cardContainer.children);
+
+    cards.sort((a, b) => {
+        const aData = a.innerHTML.toLowerCase();
+        const bData = b.innerHTML.toLowerCase();
+
+        if (sortBy === "brand") return aData.localeCompare(bData);
+        if (sortBy === "model") return aData.localeCompare(bData);
+        if (sortBy === "price-low") return parseFloat(a.innerHTML.match(/\$\d+/)[0].replace("$", "")) - parseFloat(b.innerHTML.match(/\$\d+/)[0].replace("$", ""));
+        if (sortBy === "price-high") return parseFloat(b.innerHTML.match(/\$\d+/)[0].replace("$", "")) - parseFloat(a.innerHTML.match(/\$\d+/)[0].replace("$", ""));
+        if (sortBy === "size-low") return parseFloat(a.innerHTML.match(/\d+ ft/)[0].replace(" ft", "")) - parseFloat(b.innerHTML.match(/\d+ ft/)[0].replace(" ft", ""));
+        if (sortBy === "size-high") return parseFloat(b.innerHTML.match(/\d+ ft/)[0].replace(" ft", "")) - parseFloat(a.innerHTML.match(/\d+ ft/)[0].replace(" ft", ""));
+    });
+
+    cardContainer.innerHTML = "";
+    cards.forEach(card => cardContainer.appendChild(card));
+}
+
+
+function generateCards() {
+    const rows = document.querySelectorAll("#comparisonTable tbody tr");
+    const cardContainer = document.getElementById("cardContainer");
+
+    cardContainer.innerHTML = "";
+
+    rows.forEach(row => {
+        const brand = row.cells[0].textContent.trim();
+        const model = row.cells[1].textContent.trim();
+        const price = row.cells[2].textContent.trim();
+        const material = row.cells[3].textContent.trim();
+        const size = row.cells[4].textContent.trim();
+
+        let card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <h3>${brand} - ${model}</h3>
+            <p><strong>Price:</strong> $${price}</p>
+            <p><strong>Material:</strong> ${material}</p>
+            <p><strong>Size:</strong> ${size} ft</p>
+        `;
+        cardContainer.appendChild(card);
+    });
+
+    sortCards(); // Ensures sorting is applied after generating cards
+}
+
 </script>
 
 </body>
