@@ -367,7 +367,6 @@ function filterTable() {
     const priceFilter = document.getElementById("priceFilter").value.split("-");
     const sizeFilter = document.getElementById("sizeFilter").value.split("-");
 
-    // Convert dropdown values to numbers
     const minPrice = priceFilter[0] === "all" ? 0 : parseFloat(priceFilter[0]);
     const maxPrice = priceFilter[1] === "all" ? Infinity : parseFloat(priceFilter[1]);
     const minSize = sizeFilter[0] === "all" ? 0 : parseFloat(sizeFilter[0]);
@@ -375,8 +374,8 @@ function filterTable() {
 
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
         const brand = row.dataset.brand;
-        const price = parseFloat(row.cells[2].textContent);
-        const size = parseFloat(row.cells[4].textContent);
+        const price = parseFloat(row.cells[2]?.textContent) || 0; // Handle empty or missing price
+        const size = parseFloat(row.cells[4]?.textContent) || 0; // Handle empty or missing size
 
         let brandMatch = (brandFilter === "all" || brand === brandFilter);
         let priceMatch = (price >= minPrice && price <= maxPrice);
@@ -387,6 +386,7 @@ function filterTable() {
 
     generateCards(); // Update mobile view
 }
+
 
 
 function resetFilters() {
