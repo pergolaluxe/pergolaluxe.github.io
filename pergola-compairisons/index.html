@@ -77,6 +77,262 @@
 <main>
   <style>
 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        /* FILTERS */
+        .filter-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .filter-container label {
+            font-weight: bold;
+        }
+
+        .filter-container select,
+        .filter-container input,
+        .filter-container button {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .filter-container button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .filter-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* TABLE */
+        .table-container {
+            display: block;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* CARD DESIGN */
+        .card-container {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #007bff;
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE: SHOW CARDS, HIDE TABLE */
+        @media (max-width: 768px) {
+            .table-container {
+                display: none !important;
+            }
+            .card-container {
+                display: flex;
+            }
+        }
+
+        /* DESKTOP: SHOW TABLE, HIDE CARDS */
+        @media (min-width: 769px) {
+            .table-container {
+                display: block;
+            }
+            .card-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pergola Comparison</h1>
+
+<!-- FILTERS -->
+<div class="filter-container">
+    <label for="brandFilter">Brand:</label>
+    <select id="brandFilter">
+        <option value="all">All Brands</option>
+        <option value="Brand A">Toja Grid</option>
+        <option value="Brand B">Brand B</option>
+        <option value="Brand C">Brand C</option>
+    </select>
+
+    <label for="minPrice">Min Price:</label>
+    <input type="number" id="minPrice" placeholder="Min" min="0">
+
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" id="maxPrice" placeholder="Max" min="0">
+
+    <label for="minSize">Min Size:</label>
+    <input type="number" id="minSize" placeholder="Min Size">
+
+    <label for="maxSize">Max Size:</label>
+    <input type="number" id="maxSize" placeholder="Max Size">
+
+    <button onclick="filterTable()">Apply Filters</button>
+    <button onclick="resetFilters()" style="background-color: #dc3545;">Reset Filters</button>
+</div>
+
+<!-- TABLE (For Large Screens) -->
+<div class="table-container" id="tableContainer">
+    <table id="comparisonTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Brand</th>
+                <th onclick="sortTable(1)">Model</th>
+                <th onclick="sortTable(2)">Price ($)</th>
+                <th onclick="sortTable(3)">Material</th>
+                <th onclick="sortTable(4)">Size (ft)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-brand="Brand A">
+                <td>Toja Grid</td>
+                <td>Pergola Kit</td>
+                <td>736</td>
+                <td>Steel</td>
+                <td>12</td>
+            </tr>
+            <tr data-brand="Brand A">
+                <td>Toja Grid</td>
+                <td>Model Y</td>
+                <td>950</td>
+                <td>Metal</td>
+                <td>3</td>
+            </tr>
+            <tr data-brand="Brand C">
+                <td>Brand C</td>
+                <td>Model Z</td>
+                <td>1100</td>
+                <td>Aluminum</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- CARDS (For Mobile) -->
+<div class="card-container" id="cardContainer"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    generateCards();
+    reapplySorting();
+});
+
+function generateCards() {
+    const rows = document.querySelectorAll("#comparisonTable tbody tr");
+    const cardContainer = document.getElementById("cardContainer");
+
+    cardContainer.innerHTML = "";
+
+    rows.forEach(row => {
+        const brand = row.cells[0].textContent.trim();
+        const model = row.cells[1].textContent.trim();
+        const price = row.cells[2].textContent.trim();
+        const material = row.cells[3].textContent.trim();
+        const size = row.cells[4].textContent.trim();
+
+        let card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <h3>${brand} - ${model}</h3>
+            <p><strong>Price:</strong> $${price}</p>
+            <p><strong>Material:</strong> ${material}</p>
+            <p><strong>Size:</strong> ${size} ft</p>
+        `;
+        cardContainer.appendChild(card);
+    });
+}
+
+function filterTable() {
+    const brandFilter = document.getElementById("brandFilter").value;
+    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
+        const brand = row.dataset.brand;
+        row.style.display = (brandFilter === "all" || brand === brandFilter) ? "" : "none";
+    });
+}
+
+function resetFilters() {
+    document.getElementById("brandFilter").value = "all";
+    document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
+        row.style.display = "";
+    });
+
+    generateCards();
+    reapplySorting();
+}
+
+function sortTable(colIndex) {
+    const table = document.getElementById("comparisonTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
+
+    tbody.innerHTML = "";
+    rows.forEach(row => tbody.appendChild(row));
+}
+
+function reapplySorting() {
+    document.querySelectorAll("#comparisonTable th").forEach((th, index) => {
+        th.onclick = function () {
+            sortTable(index);
+        };
+    });
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+/*   origonal code
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
