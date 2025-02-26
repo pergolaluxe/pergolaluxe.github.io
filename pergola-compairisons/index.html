@@ -169,6 +169,13 @@
                 display: none;
             }
         }
+
+        @media (min-width: 769px) {
+    .card-sort-container {
+        display: none; /* Hide sort dropdown on large screens */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -407,6 +414,21 @@ function generateCards() {
 
     sortCards(); // Ensures sorting is applied after generating cards
 }
+
+function checkScreenSize() {
+    const cardSortContainer = document.querySelector(".card-sort-container");
+
+    if (window.innerWidth <= 768) {
+        cardSortContainer.style.display = "block"; // Show dropdown on mobile
+    } else {
+        cardSortContainer.style.display = "none"; // Hide dropdown on larger screens
+    }
+}
+
+// Run on page load & when resizing window
+document.addEventListener("DOMContentLoaded", checkScreenSize);
+window.addEventListener("resize", checkScreenSize);
+
 
 </script>
 
