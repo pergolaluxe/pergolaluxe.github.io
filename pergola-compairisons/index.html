@@ -500,13 +500,15 @@ function generateCards() {
         const brand = row.cells[0].textContent.trim();
         const model = row.cells[1].textContent.trim();
         const price = row.cells[2].textContent.trim();
-        const material = row.cells[3].textContent.trim();
-        const size = row.cells[4].textContent.trim();
+        const imageSrc = row.cells[3].querySelector("img")?.src || ""; // Extracts image from table
+        const material = row.cells[4].textContent.trim();
+        const size = row.cells[5].textContent.trim();
 
         let card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
             <h3>${brand} - ${model}</h3>
+            <img src="${imageSrc}" class="thumbnail" onclick="openImage(this.src)">
             <p><strong>Price:</strong> $${price}</p>
             <p><strong>Material:</strong> ${material}</p>
             <p><strong>Size:</strong> ${size} ft</p>
