@@ -163,22 +163,25 @@ tr:hover {
     background-color: #e9f5ff;
 }
 
-        /* CARD DESIGN */
-        .card-container {
-            display: none;
-            flex-direction: column;
-            gap: 15px;
-        }
+ /* CARD DESIGN */
+.card-container {
+     display: none;
+    flex-direction: column;
+    gap: 15px;
+}
 
 
 
-        .card {
+.card {
     background: white;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .card:hover {
@@ -186,17 +189,26 @@ tr:hover {
 }
 
 
-        .card h3 {
+.card h3 {
     margin: 0 0 10px;
     color: #007bff;
     font-size: 20px;
+    text-align: center;
 }
         
 
-        .card p {
+.card p {
     margin: 5px 0;
     font-size: 16px;
     color: #555;
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 /* SMALL IMAGE STYLING */
@@ -249,6 +261,20 @@ tr:hover {
     border: none;
 }
 
+/* WHERE TO BUY BUTTON */
+.buy-btn {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
 
         /* MOBILE: SHOW CARDS, HIDE TABLE */
         @media (max-width: 768px) {
@@ -503,6 +529,15 @@ function generateCards() {
         const imageSrc = row.cells[3].querySelector("img")?.src || ""; // Extracts image from table
         const material = row.cells[4].textContent.trim();
         const size = row.cells[5].textContent.trim();
+        const warranty = row.cells[6].textContent.trim();
+        const lumberIncluded = row.cells[7].textContent.trim();
+        const mustAssemble = row.cells[8].textContent.trim();
+        const windResistance = row.cells[9].textContent.trim();
+        const snowLoad = row.cells[10].textContent.trim();
+        const features = row.cells[11].textContent.trim();
+        const rating = row.cells[12].textContent.trim();
+        const reviews = row.cells[13].textContent.trim();
+        const whereToBuy = row.cells[14].innerHTML; // Extracts HTML content for links/buttons
 
         let card = document.createElement("div");
         card.classList.add("card");
@@ -512,6 +547,15 @@ function generateCards() {
             <p><strong>Price:</strong> $${price}</p>
             <p><strong>Material:</strong> ${material}</p>
             <p><strong>Size:</strong> ${size} ft</p>
+            <p><strong>Warranty:</strong> ${warranty} years</p>
+            <p><strong>Lumber Included:</strong> ${lumberIncluded}</p>
+            <p><strong>Must Assemble:</strong> ${mustAssemble}</p>
+            <p><strong>Wind Resistance:</strong> ${windResistance}</p>
+            <p><strong>Snow Load:</strong> ${snowLoad}</p>
+            <p><strong>Features:</strong> ${features}</p>
+            <p><strong>Rating:</strong> ${rating} ⭐</p>
+            <p><strong>Reviews:</strong> ${reviews} reviews</p>
+            <div class="buy-btn">${whereToBuy}</div>
         `;
         cardContainer.appendChild(card);
     });
