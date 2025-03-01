@@ -199,6 +199,51 @@ tr:hover {
     color: #555;
 }
 
+/* SMALL IMAGE STYLING */
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* MODAL STYLING */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
         /* MOBILE: SHOW CARDS, HIDE TABLE */
         @media (max-width: 768px) {
             .table-container {
@@ -285,7 +330,7 @@ tr:hover {
             <td>Toja Grid</td>
             <td>Pergola Kit with Shade SAIL</td>
             <td>$736 </td>
-            <td></td>
+            <td><img src="../images/toja basic.png" class="thumbnail" onclick="openImage(this.src)"></td>
             <td>Powder Coated Steal Brackets</td>
             <td>Customizable - Up to 12'</td>
             <td>5</td>
@@ -481,8 +526,23 @@ document.addEventListener("DOMContentLoaded", checkScreenSize);
 window.addEventListener("resize", checkScreenSize);
 
 
+function openImage(src) {
+    document.getElementById("modalImage").src = src;
+    document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
 </script>
 
+
+<!-- MODAL STRUCTURE -->
+<div id="imageModal" class="image-modal">
+  <button class="close-btn" onclick="closeImage()">✖</button>
+  <img id="modalImage" class="modal-content">
+</div>
 </body>
 </html>
 
