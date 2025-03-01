@@ -226,17 +226,23 @@ tr:hover {
     z-index: 1000;
 }
 
+
+/* ENSURE IMAGE MAINTAINS ASPECT RATIO */
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;  /* Ensures image scales up to 90% of viewport width */
+    max-height: 90vh; /* Ensures image scales up to 90% of viewport height */
+    object-fit: contain; /* Maintains aspect ratio, no stretching */
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
+/* CLOSE BUTTON */
 .close-btn {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
     background: none;
