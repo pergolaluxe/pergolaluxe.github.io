@@ -466,14 +466,22 @@ function generateCards() {
 
 function filterTable() {
     const brandFilter = document.getElementById("brandFilter").value;
+    const minPrice = document.getElementById("minPrice")?.value || 0;
+    const maxPrice = document.getElementById("maxPrice")?.value || Infinity;
 
     document.querySelectorAll("#comparisonTable tbody tr").forEach(row => {
         const brand = row.dataset.brand;
-        row.style.display = (brandFilter === "all" || brand === brandFilter) ? "" : "none";
+        const price = parseFloat(row.cells[2].textContent.replace("$", "").trim()) || 0; // Extracts price as number
+
+        let brandMatch = brandFilter === "all" || brand === brandFilter;
+        let priceMatch = price >= minPrice && price <= maxPrice;
+
+        row.style.display = (brandMatch && priceMatch) ? "" : "none";
     });
 
-    generateCards(); // Update mobile view after filtering
+    generateCards(); // Update mobile view
 }
+
 
 
 function sortTable(colIndex) {
@@ -481,19 +489,21 @@ function sortTable(colIndex) {
     const tbody = table.querySelector("tbody");
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
-    rows.sort((a, b) => a.cells[colIndex].textContent.localeCompare(b.cells[colIndex].textContent));
+    const isNumeric = colIndex === 2; // Column index 2 is price
+
+    rows.sort((a, b) => {
+        const aText = a.cells[colIndex].textContent.trim().replace("$", "");
+        const bText = b.cells[colIndex].textContent.trim().replace("$", "");
+
+        return isNumeric 
+            ? parseFloat(aText) - parseFloat(bText) // Numeric sorting for price
+            : aText.localeCompare(bText); // Alphabetical sorting for everything else
+    });
 
     tbody.innerHTML = "";
     rows.forEach(row => tbody.appendChild(row));
 }
 
-function reapplySorting() {
-    document.querySelectorAll("#comparisonTable th").forEach((th, index) => {
-        th.onclick = function () {
-            sortTable(index);
-        };
-    });
-}
 
 function sortCards() {
     const sortBy = document.getElementById("cardSort").value;
